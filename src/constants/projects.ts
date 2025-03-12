@@ -1,7 +1,7 @@
 export const projects = [
     {
         "name": "Tweeter Clone",
-        "img": "src/assets/tweeter.png",
+        "img": "src/assets/tweeter.jpg",
         "github": "https://github.com/Soleil-Clems/Tweeter_Clone",
         "techno": [
             "php",
@@ -19,7 +19,7 @@ export const projects = [
     },
     {
         "name": "Previously On",
-        "img": "src/assets/previously-on.png",
+        "img": "src/assets/previously-on.jpg",
         "github": "https://github.com/Soleil-Clems/File_Explorer",
         "techno": [
             "React native",
@@ -33,7 +33,7 @@ export const projects = [
     },
     {
         "name": "Archideco - E-commerce",
-        "img": "src/assets/e-commerce.png",
+        "img": "src/assets/e-commerce.jpg",
         "github": "https://github.com/Soleil-Clems/Game_Alter",
         "techno": [
             "Symfony",
@@ -49,7 +49,7 @@ export const projects = [
     },
     {
         "name": "Dating App",
-        "img": "src/assets/mymeetic.png",
+        "img": "src/assets/mymeetic.jpg",
         "github": "https://github.com/Soleil-Clems/My_meetic",
         "techno": [
             "php",
@@ -67,7 +67,7 @@ export const projects = [
     },
     {
         "name": "Go Event",
-        "img": "src/assets/my-event.png",
+        "img": "src/assets/my-event.jpg",
         "github": "https://github.com/Soleil-Clems/My_Cinema",
         "techno": [
             "React",
@@ -84,7 +84,7 @@ export const projects = [
     },
     {
         "name": "Free Ads",
-        "img": "src/assets/free-ads.png",
+        "img": "src/assets/free-ads.jpg",
         "github": "https://github.com/Soleil-Clems/My_Cinema",
         "techno": [
             "Laravel",
@@ -99,7 +99,7 @@ export const projects = [
     },
     {
         "name": "Game Alter",
-        "img": "src/assets/game_alter.png",
+        "img": "src/assets/game_alter.jpg",
         "github": "https://github.com/Soleil-Clems/Game_Alter",
         "techno": [
             "phaser",

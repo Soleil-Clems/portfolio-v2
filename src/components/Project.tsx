@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import useLanguageStore from "@/store/translation.store";
 
 export const Project = () => {
-  const [category, setCategory] = useState("all");
+  const category:string = "all";
   const [showAll, setShowAll] = useState(false);
   const { lang } = useLanguageStore();
 

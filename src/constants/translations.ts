@@ -1,5 +1,3 @@
-import { CheckCircle, BookOpen, Briefcase } from "lucide-react"
-import { title } from "process";
 
 export const translations = {
     header: {

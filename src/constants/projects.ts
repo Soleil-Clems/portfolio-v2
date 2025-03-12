@@ -1,7 +1,15 @@
+import tweeter from "@/assets/tweeter.jpg";
+import previouslyOn from "@/assets/previously-on.jpg";
+import archideco from "@/assets/e-commerce.jpg";    
+import datingApp from "@/assets/mymeetic.jpg";
+import goEvent from "@/assets/my-event.jpg";
+import freeAds from "@/assets/free-ads.jpg";
+import gameAlter from "@/assets/game_alter.jpg";
+
 export const projects = [
     {
         "name": "Tweeter Clone",
-        "img": "../assets/tweeter.jpg",
+        "img": tweeter,
         "github": "https://github.com/Soleil-Clems/Tweeter_Clone",
         "techno": [
             "php",
@@ -19,7 +27,7 @@ export const projects = [
     },
     {
         "name": "Previously On",
-        "img": "../assets/previously-on.jpg",
+        "img": previouslyOn,
         "github": "https://github.com/Soleil-Clems/File_Explorer",
         "techno": [
             "React native",
@@ -33,7 +41,7 @@ export const projects = [
     },
     {
         "name": "Archideco - E-commerce",
-        "img": "src/assets/e-commerce.jpg",
+        "img": archideco,
         "github": "https://github.com/Soleil-Clems/Game_Alter",
         "techno": [
             "Symfony",
@@ -49,7 +57,7 @@ export const projects = [
     },
     {
         "name": "Dating App",
-        "img": "src/assets/mymeetic.jpg",
+        "img": datingApp,
         "github": "https://github.com/Soleil-Clems/My_meetic",
         "techno": [
             "php",
@@ -67,7 +75,7 @@ export const projects = [
     },
     {
         "name": "Go Event",
-        "img": "src/assets/my-event.jpg",
+        "img": goEvent,
         "github": "https://github.com/Soleil-Clems/My_Cinema",
         "techno": [
             "React",
@@ -84,7 +92,7 @@ export const projects = [
     },
     {
         "name": "Free Ads",
-        "img": "src/assets/free-ads.jpg",
+        "img": freeAds,
         "github": "https://github.com/Soleil-Clems/My_Cinema",
         "techno": [
             "Laravel",
@@ -99,7 +107,7 @@ export const projects = [
     },
     {
         "name": "Game Alter",
-        "img": "src/assets/game_alter.jpg",
+        "img": gameAlter,
         "github": "https://github.com/Soleil-Clems/Game_Alter",
         "techno": [
             "phaser",

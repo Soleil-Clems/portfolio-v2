@@ -1,7 +1,7 @@
 export const projects = [
     {
         "name": "Tweeter Clone",
-        "img": "src/assets/tweeter.jpg",
+        "img": "../assets/tweeter.jpg",
         "github": "https://github.com/Soleil-Clems/Tweeter_Clone",
         "techno": [
             "php",
@@ -19,7 +19,7 @@ export const projects = [
     },
     {
         "name": "Previously On",
-        "img": "src/assets/previously-on.jpg",
+        "img": "../assets/previously-on.jpg",
         "github": "https://github.com/Soleil-Clems/File_Explorer",
         "techno": [
             "React native",

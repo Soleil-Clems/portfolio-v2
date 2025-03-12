@@ -1,0 +1,201 @@
+.projects{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    row-gap: 1em;
+    padding-inline: 2em;
+
+    .more{
+        margin-top: 4em;
+    }
+
+    .cards, .more{
+        display: flex;
+        flex-direction: column;
+        row-gap:5em;
+    }
+
+    h1 {
+        font-weight: bold;
+        background: linear-gradient(to right, $purple, $blue);
+        background-clip: text;
+        color: transparent;
+        font-size: 1.5em;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .card{
+        display: flex;
+        justify-content: center;
+        // flex-direction: row-reverse;
+        column-gap: 3em;
+        transition: all .5s ease;
+        &:hover{
+            .profilContainer{
+                
+                filter: drop-shadow(5px 0px 20px $purple);
+            }
+        }
+        
+        .profilContainer{
+            transition: all .5s ease;
+            width: 25em;
+            height: 100%;
+            display: flex;
+            justify-self: center;
+            position: relative;
+            transition: all .3s ease;
+            
+            &:hover{
+                img{
+                    transform: rotate(-5deg);
+                }
+                .cadre{
+                    transform: rotate(5deg);
+                }
+            }
+            
+            order: -1;
+            
+            img{
+                border-radius: 1em;
+                border:solid 1px $purple;
+                transition: all .3s ease;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .cadre{
+                border: .5em solid;
+                border-image: linear-gradient(to right, $blue, $purple) 1;
+                border-radius: 1em;
+                width: 100%;
+                z-index: -3;
+                transition: all .3s ease;
+                height: 100%;
+                position: absolute;
+                bottom: -1.5em;
+                right: -1.5em;
+            }
+        }
+
+        .projectsContainer{
+            width: 25em;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            text-align: justify;
+            row-gap: 1em;
+
+            h2{
+                font-size: 1.3em;
+                font-weight: bold;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                color: $blue;
+
+                a{
+                    svg{
+                        color: $purple;
+                        transition: all .3s ease;
+
+                        &:hover{
+                            transform: scale(1.2);
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+
+            .iconDiv{
+                display: flex;
+                column-gap: 1em;
+                flex-wrap: wrap;
+                row-gap: 1em;
+
+                .icon{
+                    width: 20px;
+                    height: 20px;
+                    transition: all .3s ease;
+                    animation: bouge 1.3s infinite alternate ease;
+
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+
+                    img{
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .btnContainer{
+        width: 100%;
+        margin-top: 5em;
+        justify-content: center;
+
+        button{
+            background: linear-gradient(to right, $blue, $purple);
+            
+            &:hover{
+                background: linear-gradient(to right, $purple, $blu);
+                
+            }
+        }
+
+    }
+}
+
+@keyframes bouge {
+    0%{
+        transform: unset;
+    }
+    
+    50%{
+        transform: scale(1.1);
+    }
+    
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width:790px){
+    
+    .projects{
+        margin-block:8em;
+        .card{
+            flex-direction: column !important;
+            align-items: center;
+            row-gap: 3em;
+        }
+    }
+
+}
+@media (max-width:600px){
+    .projects {
+    .card{
+        row-gap: 3em;
+        
+        .profilContainer{
+            width: 80%;
+            
+        }
+
+        .projectsContainer{
+            width: 80%;
+            
+        }
+
+    }
+
+}
+
+}

@@ -1,0 +1,217 @@
+.techno{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        font-weight: bold;
+        background: linear-gradient(to right, $purple, $blue);
+        background-clip: text;
+        color: transparent;
+        font-size: 1.5em;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+        width: 50%;
+        
+        .card{
+            background: $light;
+            color: $dark;
+            display: flex;
+            font-size: 1.2em;
+            border-radius: 7px;
+            padding: .5em;
+            justify-content: center;
+            align-items: center;
+            column-gap: .5em;
+            transition: all .4s ease-out;
+
+            &:hover{
+                background: $purple;
+                color:$light;
+
+            }
+            &.html:hover {
+                background-color: #e44d27;
+                color: #f5f5f5
+            }
+            
+            &.css:hover {
+                background-color: #2465f1;
+                color: #f5f5f5
+            }
+            
+            &.sass:hover {
+                background-color: #c76394
+            }
+            
+            &.bootstrap:hover {
+                background-color: #573e7f;
+                color: #f5f5f5
+            }
+            
+            &.php:hover {
+                background-color: #4b588f;
+                color: #f5f5f5
+            }
+            
+            &.python:hover {
+                background-color: #326897;
+                color: #f5f5f5
+            }
+            
+            &.js:hover {
+                background-color: #f0dc4d;
+                color: #1d1e20
+            }
+            
+            &.chartjs:hover {
+                background-color: #FF6384;
+                color: #f5f5f5
+            }
+            
+            &.jquery:hover {
+                background-color: #0868ac;
+                color: #f5f5f5
+            }
+            
+            &.react:hover {
+                background-color: #61dafb;
+                color: white;
+            }
+
+            &.phaser:hover {
+                background-color:#9f795d;
+                color: white;
+            }
+
+            &.firebase:hover {
+                background-color:#fbc226;
+                color: white;
+            }
+            
+            &.symfony:hover {
+                background-color: #333538;
+                color: #f5f5f5
+            }
+            &.node:hover {
+                background-color: #393;
+                color: #f5f5f5
+            }
+            
+            &.sql:hover {
+                background-color: #379ad6;
+                color: #f5f5f5
+            }
+            
+            &.swift:hover {
+                background-color: #ffac45;
+                color: #f5f5f5
+            }
+            &.tailwind:hover {
+                background-color:#06b6d4;
+                color: #f5f5f5
+            }
+            
+            &.photoshop:hover {
+                background-color: #001833;
+                color: #f5f5f5
+            }
+            
+            &.premierepro:hover {
+                background-color: #99f;
+                color: #f5f5f5
+            }
+            
+            &.git:hover {
+                background-color: #f1502f;
+                color: #f5f5f5
+            }
+            
+            &.figma:hover {
+                background-color:salmon;
+                color: #f5f5f5
+            }
+            
+            &.canva:hover {
+                background-color: #1f99d5;
+                color: #f5f5f5
+            }
+            
+            &.filezilla:hover {
+                background-color: #b50001;
+                color: #f5f5f5
+            }
+            
+            &.mamp:hover {
+                background-color: #247daf;
+                color: #f5f5f5
+            }
+
+            &.docker:hover {
+                background-color:#099cec;
+                color: #f5f5f5
+            }
+            
+            &.postman:hover {
+                background-color: #f76836;
+                color: #f5f5f5
+            }
+            
+            &.vscode:hover {
+                background-color: #20a6eb;
+                color: #f5f5f5
+            }
+            
+            &.xcode:hover {
+                background-color: #1599eb;
+                color: #f5f5f5
+            }
+
+            &.linux:hover {
+                background:linear-gradient(to right,#ffb417, #fc6c0c);
+                color: #f5f5f5
+            }
+            &.canva:hover {
+                background:linear-gradient(to right,#02bfcd, #8650f0);
+                color: #f5f5f5
+            }
+
+            &.js:hover{
+                background: #F0DB4F;
+                color:$light;
+            }
+
+            svg{
+                font-size: 1.4em;
+            }
+            
+        }
+    }
+}
+
+@media (max-width:800px){
+    .techno{
+        .cards{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@media (max-width:500px){
+    .techno{
+        .cards{
+            grid-template-columns: 1fr;
+
+            .card{
+
+                justify-content: space-evenly;
+            }
+        }
+    }
+}

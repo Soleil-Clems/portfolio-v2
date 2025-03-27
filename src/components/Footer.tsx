@@ -1,6 +1,7 @@
 import { Linkedin, Github } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import useLanguageStore from "@/store/translation.store";
+import resume from "@/assets/resume.pdf"
 
 const translations = {
   en: {
@@ -53,12 +54,15 @@ export default function Footer() {
 
                 <div className="flex justify-around items-center">
                     <div className="space-x-6">
-                        <Button className="bg-own-purple dark:hover:text-black dark:hover:bg-white text-white">
+                        <a href={resume} className="px-3 py-1.5  rounded-md bg-own-purple dark:hover:text-black dark:hover:bg-white text-white">
                             {t.curriculum}
-                        </Button>
-                        <Button className="bg-white dark:bg-own-dark-deep dark:hover:bg-own-dark text-own-dark border border-own-dark hover:bg-black dark:text-white hover:text-white">
+                        </a>
+                        <a 
+                        target='_blank'
+                        href="#projects" className="px-3 py-1.5 rounded-md bg-white dark:bg-own-dark-deep dark:hover:bg-own-dark text-own-dark border border-own-dark hover:bg-black dark:text-white hover:text-white">
                             {t.projects}
-                        </Button>
+                            
+                        </a>
                     </div>
                     <div>{t.copyright.replace("2023", copyrightYear)}<span className="text-own-purple">.</span></div>
                 </div>

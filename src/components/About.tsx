@@ -106,6 +106,7 @@ export const About = () => {
                         >
                             <a
                                 href={resume}
+                                target="_blank"
                                 className="inline-flex items-center gap-2 bg-own-purple hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow-lg shadow-purple-500/20 transition-all"
                             >
                                 <span>{t.resume}</span>

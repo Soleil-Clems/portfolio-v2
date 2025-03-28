@@ -1,33 +1,32 @@
 import { Linkedin, Github } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 import useLanguageStore from "@/store/translation.store";
 import resume from "@/assets/resume.pdf"
 
 const translations = {
-  en: {
-    home: "Home",
-    projects: "Projects",
-    about: "About",
-    workTogether: "Interested in working together",
-    fullstack: "Fullstack developer",
-    curriculum: "Curriculum",
-    copyright: "©2023 Soleil OUISOL"
-  },
-  fr: {
-    home: "Accueil",
-    projects: "Projets",
-    about: "À propos",
-    workTogether: "Intéressé par une collaboration",
-    fullstack: "Développeur Fullstack",
-    curriculum: "CV",
-    copyright: "©2023 Soleil OUISOL"
-  }
+    en: {
+        home: "Home",
+        projects: "Projects",
+        about: "About",
+        workTogether: "Interested in working together",
+        fullstack: "Fullstack developer",
+        curriculum: "Curriculum",
+        copyright: "©2023 Soleil OUISOL"
+    },
+    fr: {
+        home: "Accueil",
+        projects: "Projets",
+        about: "À propos",
+        workTogether: "Intéressé par une collaboration",
+        fullstack: "Développeur Fullstack",
+        curriculum: "CV",
+        copyright: "©2023 Soleil OUISOL"
+    }
 };
 
 export default function Footer() {
     const { lang } = useLanguageStore();
     const t = translations[lang as keyof typeof translations] || translations.en;
-    
+
     const currentYear = new Date().getFullYear();
     const copyrightYear = currentYear === 2025 ? "2025" : `2025-${currentYear}`;
 
@@ -57,11 +56,11 @@ export default function Footer() {
                         <a href={resume} className="px-3 py-1.5  rounded-md bg-own-purple dark:hover:text-black dark:hover:bg-white text-white">
                             {t.curriculum}
                         </a>
-                        <a 
-                        target='_blank'
-                        href="#projects" className="px-3 py-1.5 rounded-md bg-white dark:bg-own-dark-deep dark:hover:bg-own-dark text-own-dark border border-own-dark hover:bg-black dark:text-white hover:text-white">
+                        <a
+                            target='_blank'
+                            href="#projects" className="px-3 py-1.5 rounded-md bg-white dark:bg-own-dark-deep dark:hover:bg-own-dark text-own-dark border border-own-dark hover:bg-black dark:text-white hover:text-white">
                             {t.projects}
-                            
+
                         </a>
                     </div>
                     <div>{t.copyright.replace("2023", copyrightYear)}<span className="text-own-purple">.</span></div>

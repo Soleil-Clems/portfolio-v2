@@ -53,11 +53,13 @@ export default function Footer() {
 
                 <div className="flex justify-around items-center">
                     <div className="space-x-6">
-                        <a href={resume} className="px-3 py-1.5  rounded-md bg-own-purple dark:hover:text-black dark:hover:bg-white text-white">
+                        <a 
+                        target='_blank'
+                        href={resume} className="px-3 py-1.5  rounded-md bg-own-purple dark:hover:text-black dark:hover:bg-white text-white">
                             {t.curriculum}
                         </a>
                         <a
-                            target='_blank'
+                            
                             href="#projects" className="px-3 py-1.5 rounded-md bg-white dark:bg-own-dark-deep dark:hover:bg-own-dark text-own-dark border border-own-dark hover:bg-black dark:text-white hover:text-white">
                             {t.projects}
 

@@ -43,10 +43,12 @@ export const Project = () => {
             >
               <CustomCard 
                 title={project.name} 
-                description={project.description[lang] || project.description.en} // Use language-specific description
+                description={project.description[lang] || project.description.en} 
                 imageUrl={project.img} 
                 githubUrl={project.github} 
                 techno={project.techno} 
+                skills={project.skills} 
+
               />
             </div>
           ))}

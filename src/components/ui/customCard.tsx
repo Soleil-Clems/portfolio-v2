@@ -37,6 +37,7 @@ export const CustomCard = ({
           <img 
             src={imageUrl} 
             alt={title} 
+            loading="lazy"
             className="object-cover w-full h-full transition-transform duration-500 hover:scale-105" 
           />
         </div>
@@ -73,6 +74,7 @@ export const CustomCard = ({
               src={imageUrl} 
               alt={title} 
               className="object-cover w-full h-full" 
+              loading="lazy"
             />
           </div>
 
@@ -121,7 +123,6 @@ export const CustomCard = ({
               {lang === "en" ? "View on GitHub" : "Voir sur GitHub"}
             </a>
           )}
-
         
         
         </DialogContent>

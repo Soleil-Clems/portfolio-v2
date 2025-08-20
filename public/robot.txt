@@ -1,0 +1,14 @@
+User-agent: *
+
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /src/
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+Sitemap: https://soleil-ouisol.fr/sitemap.xml
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

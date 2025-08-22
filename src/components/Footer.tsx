@@ -1,4 +1,4 @@
-import { Linkedin, Github } from 'lucide-react';
+import { Linkedin, Github, Mail } from 'lucide-react';
 import useLanguageStore from "@/store/translation.store";
 import resume from "@/assets/resume.pdf"
 
@@ -65,7 +65,9 @@ export default function Footer() {
 
                         </a>
                     </div>
-                    <div>{t.copyright.replace("2023", copyrightYear)}<span className="text-own-purple">.</span></div>
+                    <div className="flex items-center gap-2">{t.copyright.replace("2023", copyrightYear)}<span className="text-own-purple">. | 
+                     
+                        </span> <span className="flex gap-2 items-center"><Mail size={20}/> adonai.ouisol@epitech.eu</span></div>
                 </div>
             </div>
         </footer>

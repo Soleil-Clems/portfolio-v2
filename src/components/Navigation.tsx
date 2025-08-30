@@ -68,6 +68,14 @@ export default function Navigation() {
                 {t.home}
               </a>
             </li>
+              <li>
+              <a
+                href="#about"
+                className="text-base text-own-dark dark:text-gray-200 hover:text-own-purple dark:hover:text-own-purple font-medium transition-colors"
+              >
+                {t.about}
+              </a>
+            </li>
             <li>
               <a
                 href="#projects"
@@ -76,14 +84,7 @@ export default function Navigation() {
                 {t.projects}
               </a>
             </li>
-            <li>
-              <a
-                href="#about"
-                className="text-base text-own-dark dark:text-gray-200 hover:text-own-purple dark:hover:text-own-purple font-medium transition-colors"
-              >
-                {t.about}
-              </a>
-            </li>
+          
             <li>
               <a
                 href="#skills"
@@ -160,6 +161,15 @@ export default function Navigation() {
                       {t.home}
                     </a>
                   </li>
+                   <li>
+                    <a
+                      href="#about"
+                      className="block py-2 text-lg text-own-dark dark:text-white hover:text-own-purple dark:hover:text-own-purple font-medium"
+                      onClick={handleLinkClick}
+                    >
+                      {t.about}
+                    </a>
+                  </li>
                   <li>
                     <a
                       href="#projects"
@@ -169,15 +179,7 @@ export default function Navigation() {
                       {t.projects}
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="#about"
-                      className="block py-2 text-lg text-own-dark dark:text-white hover:text-own-purple dark:hover:text-own-purple font-medium"
-                      onClick={handleLinkClick}
-                    >
-                      {t.about}
-                    </a>
-                  </li>
+                 
                   <li>
                     <a
                       href="#skills"

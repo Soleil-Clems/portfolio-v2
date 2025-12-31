@@ -10,7 +10,7 @@ const translations = {
         workTogether: "Interested in working together",
         fullstack: "Fullstack developer",
         curriculum: "Curriculum",
-        copyright: "©2023 Soleil OUISOL"
+        copyright: "©2025 Soleil OUISOL"
     },
     fr: {
         home: "Accueil",
@@ -19,7 +19,7 @@ const translations = {
         workTogether: "Intéressé par une collaboration",
         fullstack: "Développeur Fullstack",
         curriculum: "CV",
-        copyright: "©2023 Soleil OUISOL"
+        copyright: "©2025 Soleil OUISOL"
     }
 };
 
@@ -53,21 +53,21 @@ export default function Footer() {
 
                 <div className="flex justify-around items-center">
                     <div className="space-x-6">
-                        <a 
-                        target='_blank'
-                        href={resume} className="px-3 py-1.5  rounded-md bg-own-purple dark:hover:text-black dark:hover:bg-white text-white">
+                        <a
+                            target='_blank'
+                            href={resume} className="px-3 py-1.5  rounded-md bg-own-purple dark:hover:text-black dark:hover:bg-white text-white">
                             {t.curriculum}
                         </a>
                         <a
-                            
+
                             href="#projects" className="px-3 py-1.5 rounded-md bg-white dark:bg-own-dark-deep dark:hover:bg-own-dark text-own-dark border border-own-dark hover:bg-black dark:text-white hover:text-white">
                             {t.projects}
 
                         </a>
                     </div>
-                    <div className="flex items-center gap-2">{t.copyright.replace("2023", copyrightYear)}<span className="text-own-purple">. | 
-                     
-                        </span> <span className="flex gap-2 items-center"><Mail size={20}/> adonai.ouisol@epitech.eu</span></div>
+                    <div className="flex items-center gap-2">{t.copyright.replace("2023", copyrightYear)}<span className="text-own-purple">. |
+
+                    </span> <span className="flex gap-2 items-center"><Mail size={20} /> adonai-clems-soleil.ouisol@epitech.eu</span></div>
                 </div>
             </div>
         </footer>

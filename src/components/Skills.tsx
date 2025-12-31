@@ -160,12 +160,12 @@ export const Experience = () => {
       progress: 80,
       categoryKey: "testing",
     },
-    { 
-      title: "Figma", 
-      descriptionKey: "figmaDesc", 
-      icon: figmaIcon, 
-      progress: 50, 
-      categoryKey: "design" 
+    {
+      title: "Figma",
+      descriptionKey: "figmaDesc",
+      icon: figmaIcon,
+      progress: 50,
+      categoryKey: "design"
     },
     {
       title: "Docker",
@@ -205,12 +205,12 @@ export const Experience = () => {
       progress: 95,
       categoryKey: "frontend",
     },
-    { 
-      title: "CSS3", 
-      descriptionKey: "css3Desc", 
-      icon: cssIcon, 
-      progress: 90, 
-      categoryKey: "frontend" 
+    {
+      title: "CSS3",
+      descriptionKey: "css3Desc",
+      icon: cssIcon,
+      progress: 90,
+      categoryKey: "frontend"
     },
     {
       title: "SQL",
@@ -372,21 +372,70 @@ export const Experience = () => {
         >
           <Tabs defaultValue="outils" className="w-full">
             <TabsList className="flex gap-2 w-full mb-8 p-1 bg-gray-100 dark:bg-gray-800 rounded-lg">
-              <TabsTrigger 
-                value="outils" 
-                className="w-1/3 text-sm md:text-base rounded-md data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm dark:data-[state=active]:bg-gray-700 dark:data-[state=active]:text-white"
+              <TabsTrigger
+                value="outils"
+                className="
+                  w-1/3 text-sm md:text-base rounded-md transition-colors
+
+                  bg-transparent
+                  text-gray-600
+                  hover:text-gray-900
+
+                  dark:text-gray-300
+                  dark:hover:text-white
+
+                  data-[state=active]:bg-white
+                  data-[state=active]:text-gray-900
+                  data-[state=active]:shadow-sm
+
+                  dark:data-[state=active]:bg-gray-700
+                  dark:data-[state=active]:text-white
+                "
               >
+
                 {t.toolsEnvironments}
               </TabsTrigger>
-              <TabsTrigger 
-                value="language" 
-                className="w-1/3 text-sm md:text-base rounded-md data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm dark:data-[state=active]:bg-gray-700 dark:data-[state=active]:text-white"
+              <TabsTrigger
+                value="language"
+                className="
+                  w-1/3 text-sm md:text-base rounded-md transition-colors
+
+                  bg-transparent
+                  text-gray-600
+                  hover:text-gray-900
+
+                  dark:text-gray-300
+                  dark:hover:text-white
+
+                  data-[state=active]:bg-white
+                  data-[state=active]:text-gray-900
+                  data-[state=active]:shadow-sm
+
+                  dark:data-[state=active]:bg-gray-700
+                  dark:data-[state=active]:text-white
+                "
               >
                 {t.languages}
               </TabsTrigger>
-              <TabsTrigger 
-                value="framework" 
-                className="w-1/3 text-sm md:text-base rounded-md data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm dark:data-[state=active]:bg-gray-700 dark:data-[state=active]:text-white"
+              <TabsTrigger
+                value="framework"
+                className="
+                  w-1/3 text-sm md:text-base rounded-md transition-colors
+
+                  bg-transparent
+                  text-gray-600
+                  hover:text-gray-900
+
+                  dark:text-gray-300
+                  dark:hover:text-white
+
+                  data-[state=active]:bg-white
+                  data-[state=active]:text-gray-900
+                  data-[state=active]:shadow-sm
+
+                  dark:data-[state=active]:bg-gray-700
+                  dark:data-[state=active]:text-white
+                "
               >
                 {t.frameworksLibraries}
               </TabsTrigger>

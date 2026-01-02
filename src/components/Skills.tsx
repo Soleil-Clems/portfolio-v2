@@ -26,9 +26,9 @@ const translations = {
   en: {
     skills: "Skills",
     overview: "A comprehensive overview of my technical expertise and proficiency levels across various technologies and tools.",
-    toolsEnvironments: "Tools & Environments",
+    toolsEnvironments: "Tools",
     languages: "Languages",
-    frameworksLibraries: "Frameworks & Libraries",
+    frameworksLibraries: "Frameworks",
     expert: "Expert",
     advanced: "Advanced",
     proficient: "Proficient",
@@ -67,9 +67,9 @@ const translations = {
   fr: {
     skills: "Compétences",
     overview: "Un aperçu complet de mon expertise technique et de mes niveaux de compétence dans diverses technologies et outils.",
-    toolsEnvironments: "Outils & Environnements",
+    toolsEnvironments: "Outils",
     languages: "Langages",
-    frameworksLibraries: "Frameworks & Bibliothèques",
+    frameworksLibraries: "Frameworks",
     expert: "Expert",
     advanced: "Avancé",
     proficient: "Compétent",
@@ -350,7 +350,7 @@ export const Experience = () => {
   }
 
   return (
-    <section id='skills' className="w-full flex justify-center py-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900">
+    <section id='skills' className="w-full flex justify-center py-16 bg-gradient-to-b from-white to-gray-50@   dark:from-gray-950 dark:to-gray-900">
       <div className="w-[90%] max-w-7xl flex flex-col gap-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <div className="relative">

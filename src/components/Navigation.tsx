@@ -118,9 +118,9 @@ export default function Navigation() {
           <a
             href="https://www.linkedin.com/in/soleil-ouisol"
             target="_blank"
-            className="flex items-center justify-center w-7 h-7 text-white bg-black  rounded-full hover:bg-gray-800  transition-colors"
+            className="flex items-center justify-center w-7 h-7 text-whiterounded-full   transition-colors"
           >
-            <LinkedInLogoIcon className="dark:text-white w-full h-full dark:hover:text-gray-200" />
+            <LinkedInLogoIcon className="text-[#0a66c2]  w-full h-full hover:text-[#0d75dc]" />
           </a>
           <a
             href="https://github.com/Soleil-Clems"

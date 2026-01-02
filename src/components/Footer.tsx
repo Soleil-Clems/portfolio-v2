@@ -51,7 +51,8 @@ export default function Footer() {
                     <p className="text-center">{t.fullstack}</p>
                 </div>
 
-                <div className="flex justify-around items-center">
+                <div className="flex flex-col sm:flex-row justify-around items-center">
+
                     <div className="space-x-6">
                         <a
                             target='_blank'
@@ -65,9 +66,11 @@ export default function Footer() {
 
                         </a>
                     </div>
-                    <div className="flex items-center gap-2">{t.copyright.replace("2023", copyrightYear)}<span className="text-own-purple">. |
+                    <div className="flex items-center gap-2 sm:flex">
 
-                    </span> <span className="flex gap-2 items-center"><Mail size={20} /> adonai-clems-soleil.ouisol@epitech.eu</span></div>
+                        <span className='hidden md:flex'>{t.copyright.replace("2023", copyrightYear)}</span> <span className="text-own-purple hidden md:flex"> |
+
+                        </span> <span className="flex gap-2 items-center my-4"><Mail size={20} /> adonai-clems-soleil.ouisol@epitech.eu</span></div>
                 </div>
             </div>
         </footer>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import { MessageCircleDashed, Menu, X, Languages, Linkedin, Github } from "lucide-react"
+import { Menu, X, Languages, Linkedin, Github } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Button } from "@/components/ui/button"

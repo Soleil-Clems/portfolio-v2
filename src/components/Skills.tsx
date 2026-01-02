@@ -26,9 +26,9 @@ const translations = {
   en: {
     skills: "Skills",
     overview: "A comprehensive overview of my technical expertise and proficiency levels across various technologies and tools.",
-    toolsEnvironments: "Tools & Environments",
+    toolsEnvironments: "Tools",
     languages: "Languages",
-    frameworksLibraries: "Frameworks & Libraries",
+    frameworksLibraries: "Frameworks",
     expert: "Expert",
     advanced: "Advanced",
     proficient: "Proficient",
@@ -67,9 +67,9 @@ const translations = {
   fr: {
     skills: "Compétences",
     overview: "Un aperçu complet de mon expertise technique et de mes niveaux de compétence dans diverses technologies et outils.",
-    toolsEnvironments: "Outils & Environnements",
+    toolsEnvironments: "Outils",
     languages: "Langages",
-    frameworksLibraries: "Frameworks & Bibliothèques",
+    frameworksLibraries: "Frameworks",
     expert: "Expert",
     advanced: "Avancé",
     proficient: "Compétent",

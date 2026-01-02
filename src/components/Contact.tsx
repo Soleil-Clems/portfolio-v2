@@ -90,7 +90,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="flex w-full py-16 px-4 dark:bg-gradient-to-b  dark:from-black dark:to-gray-900">
+    <section id="contact" className="flex w-full py-16 px-4 dark:bg-gradient-to-b  dark:from-gray-900 dark:to-black">
       <div className="max-w-5xl mx-auto space-y-12">
         <div>
           <h1 className="font-bold text-5xl sm:text-6xl text-primary">

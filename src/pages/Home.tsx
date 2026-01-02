@@ -4,7 +4,7 @@ import Hero from '@/components/Hero'
 import {Experience} from '@/components/Skills'
 import {About} from '@/components/About'
 import {Project} from '@/components/Project'
-import {Evaluation} from '@/components/Evaluation'
+// import {Evaluation} from '@/components/Evaluation'
 import Contact from '@/components/Contact'
 
 
@@ -16,7 +16,7 @@ export default function Home() {
             <About/>
             <Project/>
             <Experience/>
-            <Evaluation/>
+            {/* <Evaluation/> */}
             <Contact/>
             <Footer/>
         </div>

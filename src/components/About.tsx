@@ -10,7 +10,7 @@ export const About = () => {
     const { lang } = useLanguageStore();
     const t = translations.about[lang]
     return (
-        <section id="about" className="w-full flex justify-center py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900">
+        <section id="about" className="w-full flex justify-center py-20 bg-gradient-to-b from-white to-gray-50 dark:from-[#09090b] dark:to-gray-900">
             <motion.div
                 className="w-full max-w-7xl flex flex-col lg:flex-row justify-between items-center px-6 lg:px-8 gap-16"
                 initial={{ opacity: 0 }}

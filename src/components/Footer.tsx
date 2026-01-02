@@ -31,7 +31,7 @@ export default function Footer() {
     const copyrightYear = currentYear === 2025 ? "2025" : `2025-${currentYear}`;
 
     return (
-        <footer className="flex flex-col w-full p-6 dark:bg-gradient-to-b dark:from-gray-900 dark:to-black">
+        <footer className="flex flex-col w-full p-6 dark:bg-gradient-to-b dark:from-black dark:to-gray-900">
             <div className="flex w-full justify-around space-x-6">
                 <ul className="flex space-x-8">
                     <li><a href="#home" className="text-lg text-own-dark hover:text-own-purple font-bold">{t.home}</a></li>

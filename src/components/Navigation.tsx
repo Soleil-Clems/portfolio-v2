@@ -35,9 +35,8 @@ export default function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        }`}
     >
       <nav className="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
         <div className="flex items-center">
@@ -51,7 +50,7 @@ export default function Navigation() {
             variant="ghost"
             size="icon"
             onClick={toggleMenu}
-            className="text-own-dark dark:text-white"
+            className="text-own-dark dark:text-white bg-white border border-gray-300 dark:bg-[#1a1a1a]"
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -68,7 +67,7 @@ export default function Navigation() {
                 {t.home}
               </a>
             </li>
-              <li>
+            <li>
               <a
                 href="#about"
                 className="text-base text-own-dark dark:text-gray-200 hover:text-own-purple dark:hover:text-own-purple font-medium transition-colors"
@@ -84,7 +83,7 @@ export default function Navigation() {
                 {t.projects}
               </a>
             </li>
-          
+
             <li>
               <a
                 href="#skills"
@@ -161,7 +160,7 @@ export default function Navigation() {
                       {t.home}
                     </a>
                   </li>
-                   <li>
+                  <li>
                     <a
                       href="#about"
                       className="block py-2 text-lg text-own-dark dark:text-white hover:text-own-purple dark:hover:text-own-purple font-medium"
@@ -179,7 +178,7 @@ export default function Navigation() {
                       {t.projects}
                     </a>
                   </li>
-                 
+
                   <li>
                     <a
                       href="#skills"
@@ -196,6 +195,15 @@ export default function Navigation() {
                       onClick={handleLinkClick}
                     >
                       {t.evaluation}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#contact"
+                      className="block py-2 text-lg text-own-dark dark:text-white hover:text-own-purple dark:hover:text-own-purple font-medium"
+                      onClick={handleLinkClick}
+                    >
+                      {t.contact}
                     </a>
                   </li>
 

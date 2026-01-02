@@ -350,7 +350,7 @@ export const Experience = () => {
   }
 
   return (
-    <section id='skills' className="w-full flex justify-center py-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900">
+    <section id='skills' className="w-full flex justify-center py-16 bg-gradient-to-b from-white to-gray-50@   dark:from-gray-950 dark:to-gray-900">
       <div className="w-[90%] max-w-7xl flex flex-col gap-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <div className="relative">

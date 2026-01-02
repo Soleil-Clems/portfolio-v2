@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import { MessageCircleDashed, Menu, X, Languages } from "lucide-react"
+import { MessageCircleDashed, Menu, X, Languages, Linkedin, Github } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { translations } from "@/constants/translations"
 import useLanguageStore from "@/store/translation.store"
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 
 
 export default function Navigation() {
@@ -100,25 +101,44 @@ export default function Navigation() {
                 {t.evaluation}
               </a>
             </li>
+            <li>
+              <a
+                href="#contact"
+                className="text-base text-own-dark dark:text-gray-200 hover:text-own-purple dark:hover:text-own-purple font-medium transition-colors"
+              >
+                {t.contact}
+              </a>
+            </li>
           </ul>
         </div>
 
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-4">
+          <div className="flex gap-2">
+
           <a
-            href="#contact"
-            className="flex items-center justify-center w-10 h-10 text-white bg-black dark:bg-white rounded-full hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+            href="https://www.linkedin.com/in/soleil-ouisol"
+            target="_blank"
+            className="flex items-center justify-center w-7 h-7 text-white bg-black  rounded-full hover:bg-gray-800  transition-colors"
           >
-            <MessageCircleDashed size={20} className="dark:text-black" />
+            <LinkedInLogoIcon className="dark:text-white w-full h-full dark:hover:text-gray-200" />
           </a>
+          <a
+            href="https://github.com/Soleil-Clems"
+            target="_blank"
+            className="flex items-center justify-center w-7 h-7 text-white bg-black  rounded-full hover:bg-gray-800  transition-colors"
+          >
+            <GitHubLogoIcon className="dark:text-white dark:hover:text-gray-200 w-full h-full" />
+          </a>
+          </div>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
                 size="icon"
-                className="w-10 h-10 rounded-full border-none bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200"
+                className="w-7 h-8 rounded-full border-none bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200"
               >
-                <Languages size={20} />
+                <Languages size={16} />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -209,14 +229,26 @@ export default function Navigation() {
 
                   <li className="pt-4 border-t border-gray-200 dark:border-gray-800">
                     <div className="flex items-center justify-between">
-                      <a
-                        href="#contact"
-                        className="flex items-center gap-2 py-2 text-lg text-own-dark dark:text-white hover:text-own-purple dark:hover:text-own-purple font-medium"
-                        onClick={handleLinkClick}
-                      >
-                        <MessageCircleDashed size={20} />
-                        {t.contact}
-                      </a>
+                      <div className="flex gap-2">
+                    
+
+                        <a
+                          href="https://www.linkedin.com/in/soleil-ouisol"
+                          target="_blank"
+                          className="flex items-center gap-2 py-2 text-lg text-own-dark dark:text-white hover:text-own-purple dark:hover:text-own-purple font-medium"
+                        >
+                          <Linkedin size={20} />
+                        </a>
+
+                        <a
+                          href="https://github.com/Soleil-Clems"
+                          target="_blank"
+                          className="flex items-center gap-2 py-2 text-lg text-own-dark dark:text-white hover:text-own-purple dark:hover:text-own-purple font-medium"
+                        >
+                          <Github size={20} />
+                        </a>
+                      </div>
+
 
                       <div className="flex items-center gap-3">
                         <Button

@@ -136,7 +136,7 @@ export default function Navigation() {
               <Button
                 variant="outline"
                 size="icon"
-                className="w-7 h-8 rounded-full border-none bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200"
+                className="w-7 h-8 rounded-full border-none bg-black dark:bg-white text-white hover:text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200"
               >
                 <Languages size={16} />
               </Button>

@@ -21,6 +21,9 @@ import typescriptIcon from "../../public/typescript.svg"
 import figmaIcon from "../../public/figma.svg"
 import bootstrapIcon from "../../public/bootstrap.svg"
 import cssIcon from "../../public/css.svg"
+import javaIcon from "../../public/java.svg"
+import nextIcon from "../../public/nextjs_icon_dark.svg"
+import springbootIcon from "../../public/spring.svg"
 
 const translations = {
   en: {
@@ -62,7 +65,11 @@ const translations = {
     development: "Development",
     devOps: "DevOps",
     testing: "Testing",
-    design: "Design"
+    design: "Design",
+    javaDesc: "Object-oriented programming for backend applications",
+    nextDesc: "React-based framework for server-side rendered and static web apps",
+    springBootDesc: "Opinionated framework for building Spring-based microservices",
+
   },
   fr: {
     skills: "Compétences",
@@ -100,7 +107,11 @@ const translations = {
     development: "Développement",
     devOps: "DevOps",
     testing: "Test",
-    design: "Design"
+    design: "Design",
+    javaDesc: "Programmation orientée objet pour les applications backend",
+    nextDesc: "Framework basé sur React pour des applications web SSR et statiques",
+    springBootDesc: "Framework Spring pour créer des microservices",
+
   }
 }
 
@@ -226,6 +237,20 @@ export const Experience = () => {
       progress: 60,
       categoryKey: "backend",
     },
+    {
+      title: "Java",
+      descriptionKey: "javaDesc",
+      icon: javaIcon,
+      progress: 80,
+      categoryKey: "backend",
+    },
+    {
+      title: "Next.js",
+      descriptionKey: "nextDesc",
+      icon: nextIcon,
+      progress: 80,
+      categoryKey: "frontend",
+    },
   ]
 
   const frameworks: Item[] = [
@@ -263,6 +288,13 @@ export const Experience = () => {
       icon: bootstrapIcon,
       progress: 80,
       categoryKey: "frontend",
+    },
+    {
+      title: "Spring Boot",
+      descriptionKey: "springBootDesc",
+      icon: springbootIcon,
+      progress: 50,
+      categoryKey: "backend",
     },
   ]
 
@@ -350,14 +382,19 @@ export const Experience = () => {
   }
 
   return (
-    <section id='skills' className="w-full flex justify-center py-16 bg-gradient-to-b from-white to-gray-50@   dark:from-gray-950 dark:to-gray-900">
+    <section id='skills' className="w-full flex justify-center py-16 bg-gradient-to-b from-white to-gray-50  dark:from-black dark:to-gray-900">
       <div className="w-[90%] max-w-7xl flex flex-col gap-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <div className="relative">
+            <div className="inline-flex items-center gap-3">
+              <div className="h-px w-16 bg-gradient-to-r from-own-purple to-transparent"></div>
+              <span className="text-xs font-semibold tracking-widest text-own-purple/80 uppercase">
+                {lang === "en" ? "See my skills" : 'Découvrez mes compétences'}
+              </span>
+            </div>
             <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl text-own-dark-deep dark:text-white py-4">
               {t.skills}<span className="text-own-purple">.</span>
             </h1>
-            <div className="absolute bottom-0 left-0 h-1 w-16 bg-own-purple"></div>
           </div>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
             {t.overview}

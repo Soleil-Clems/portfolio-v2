@@ -1,7 +1,6 @@
-
 export const translations = {
     header: {
-        en: {  
+        en: {
             home: "Home",
             projects: "Projects",
             about: "About",
@@ -21,21 +20,21 @@ export const translations = {
 
     hero: {
         en: {
-            greeting: "Hey, I'm Soleil 👋🏻",
+            greeting: "Hello, I'm Soleil 👋🏻",
             title: `<span class="inline-block">Full</span>
                     <span class="inline-block ml-2 text-own-purple">stack</span>
                     <span class="block mt-2">Developer</span>`,
-            description: `I'm a fullstack developer studying at Epitech Marseille. I specialize in building 
-                          <span class="text-own-purple font-medium">exceptional digital experiences</span> that bring your vision to life.`,
+            description: `I am a <span class="font-medium">fullstack developer</span> currently working in an alternating role at <span class="text-own-purple font-medium">Librasoft</span>.  
+                          I specialize in building <span class="text-own-purple font-medium">robust, scalable, and maintainable applications</span>, transforming complex requirements into practical and efficient digital solutions.`,
             curriculum: "Curriculum",
             projects: "Projects",
         },
         fr: {
-            greeting: "Salut, je suis Soleil 👋🏻",
+            greeting: "Bonjour, je suis Soleil 👋🏻",
             title: `<span class="inline-block">Dev</span>
                     <span class="inline-block ml-2 text-own-purple">Full Stack</span>`,
-            description: `Je suis un développeur fullstack étudiant à Epitech Marseille. Je suis spécialisé dans la création 
-                          <span class="text-own-purple font-medium">d'expériences numériques exceptionnelles</span> qui donnent vie à votre vision.`,
+            description: `Je suis un <span class="font-medium">développeur fullstack</span> en alternance chez <span class="text-own-purple font-medium">Librasoft</span>.  
+                          Je conçois des <span class="text-own-purple font-medium">applications robustes, évolutives et maintenables</span>, en transformant des besoins complexes en solutions digitales efficaces et concrètes.`,
             curriculum: "CV",
             projects: "Projets",
         },
@@ -43,55 +42,42 @@ export const translations = {
 
     about: {
         en: {
-            web: "Web & Mobile Developer",
-            description1: `As a web & mobile developer at <span className="text-own-purple font-medium">Web@cadémie</span>, I have acquired
-                                            solid knowledge and skills in computer science through various
-                                            stimulating projects. These projects, focused on acquiring
-                                            practical and in-demand professional skills, have allowed me to
-                                            train in an effective and hands-on manner.`,
-            description2: `  My journey at Web@cadémie has taught me to be <span className="font-medium">self-taught</span>,
-                                <span className="font-medium"> versatile</span> with different technologies, to work in a team, and to
-                                adhere to the requirements of a project specification.`,
-            description3: `  Today, as I complete my program, I present to you through this
-                                portfolio the evolution of my skills and achievements over the
-                                course of my two years of study.`,
+            web: "Fullstack Developer",
+            description1: `As a fullstack developer, I have hands-on experience in both frontend and backend development, delivering applications that are performant, maintainable, and user-centered.`,
+            description2: `I am <span class="font-medium">self-taught</span>, <span class="font-medium">adaptable</span> with various technologies, and excel at collaborating in team environments to produce high-quality results.`,
+            description3: `This portfolio highlights my professional projects, personal initiatives, and the continuous growth of my technical expertise in real-world settings.`,
             resume: "View Full Resume",
         },
         fr: {
-            web: "Développeur Web & Mobile",
-            description1: `En tant que développeur web & mobile à <span className="text-own-purple font-medium">Web@cadémie</span>, 
-                            j'ai acquis des connaissances et compétences solides en informatique à travers divers projets stimulants. 
-                            Ces projets, axés sur l'acquisition de compétences pratiques et recherchées sur le marché du travail, 
-                            m'ont permis de me former de manière efficace et concrète.`,
-            description2: `  Mon parcours à la Web@cadémie m'a appris à être <span className="font-medium">autodidacte</span>,
-                                <span className="font-medium"> polyvalent</span> avec différentes technologies, à travailler en équipe 
-                                et à respecter les exigences d'un cahier des charges.`,
-            description3: `  Aujourd'hui, à l'issue de mon parcours, je vous présente à travers ce portfolio l'évolution 
-                                de mes compétences et réalisations tout au long de mes deux années d'étude.`,
+            web: "Développeur Fullstack",
+            description1: `En tant que développeur fullstack, j'ai une expérience pratique en développement frontend et backend, en livrant des applications performantes, maintenables et centrées sur l'utilisateur.`,
+            description2: `Je suis <span class="font-medium">autodidacte</span>, <span class="font-medium">polyvalent</span> avec diverses technologies, et je collabore efficacement en équipe pour produire des résultats techniques de haute qualité.`,
+            description3: `Ce portfolio présente mes projets professionnels, mes initiatives personnelles et l'évolution continue de mes compétences techniques dans des contextes concrets.`,
             resume: "Voir le CV",
         },
     },
-    contact:{
-        en:{
+
+    contact: {
+        en: {
             title: "Contact Me",
-            description:'Have a question or want to work together? Feel free to reach out using the form below.',
-            description1:'Get in Touch',
-            description2:"Fill out the form below and I'll get back to you as soon as possible.",
-            name:'Name',
-            email:'Email',
-            message:'Message',
-            send:'Send Message',
-            success:'Your message has been sent successfully!',
-            error:'An error occurred while sending your message. Please try again later.',
-            placeholderName:"Your name",
-            placeholderEmail:"your.email@example.com",
-            placeholderMessage:"Write your message here",
+            description: 'For professional inquiries, collaboration opportunities, or project discussions, feel free to reach out using the form below.',
+            description1: 'Get in Touch',
+            description2: "Complete the form and I will respond promptly with concrete solutions or guidance.",
+            name: 'Name',
+            email: 'Email',
+            message: 'Message',
+            send: 'Send Message',
+            success: 'Your message has been sent successfully!',
+            error: 'An error occurred while sending your message. Please try again later.',
+            placeholderName: "Your name",
+            placeholderEmail: "your.email@example.com",
+            placeholderMessage: "Write your message here",
         },
         fr: {
             title: "Contactez-moi",
-            description: "Vous avez une question ou vous souhaitez collaborer ? N'hésitez pas à me contacter en utilisant le formulaire ci-dessous.",
+            description: "Pour toute question professionnelle, proposition de collaboration ou discussion de projet, n'hésitez pas à me contacter via le formulaire ci-dessous.",
             description1: "Entrer en contact",
-            description2: "Remplissez le formulaire ci-dessous et je vous répondrai dès que possible.",
+            description2: "Remplissez le formulaire et je vous répondrai rapidement avec des solutions concrètes ou des conseils adaptés.",
             name: "Nom",
             email: "Email",
             message: "Message",
@@ -101,7 +87,6 @@ export const translations = {
             placeholderName: "Votre nom",
             placeholderEmail: "votre.email@example.com",
             placeholderMessage: "Écrivez votre message ici",
-        }
-    }
-
+        },
+    },
 };

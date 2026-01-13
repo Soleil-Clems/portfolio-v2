@@ -92,7 +92,14 @@ const Contact = () => {
   return (
     <section id="contact" className="flex w-full py-16 px-4 dark:bg-gradient-to-b  dark:from-gray-900 dark:to-black">
       <div className="max-w-5xl mx-auto space-y-12">
+        
         <div>
+           <div className="inline-flex items-center gap-3">
+            <div className="h-px w-16 bg-gradient-to-r from-own-purple to-transparent"></div>
+            <span className="text-xs font-semibold tracking-widest text-own-purple/80 uppercase">
+              {lang === "en" ? "Contact me" : 'Me joindre'}
+            </span>
+          </div>
           <h1 className="font-bold text-5xl sm:text-6xl text-primary">
             Contact<span className="text-purple-600">.</span>
           </h1>

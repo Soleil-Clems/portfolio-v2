@@ -5,7 +5,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import useLanguageStore from "@/store/translation.store"
 import dockerIcon from "../../public/docker.svg"
-import reactIcon from "../../public/file-type-reactts.svg"
 import symfonyIcon from "../../public/symfony.svg"
 import tailwindIcon from "../../public/tailwindcss-icon.svg"
 import reactnvIcon from "../../public/react.svg"
@@ -24,6 +23,14 @@ import cssIcon from "../../public/css.svg"
 import javaIcon from "../../public/java.svg"
 import nextIcon from "../../public/nextjs_icon_dark.svg"
 import springbootIcon from "../../public/spring.svg"
+import goIcon from "../../public/go.svg"
+import scssIcon from "../../public/file-type-scss.svg"
+import nodeIcon from "../../public/file-type-node.svg"
+import nestjsIcon from "../../public/nestjs.svg"
+import electronIcon from "../../public/electron.svg"
+import gitlabIcon from "../../public/gitlab.svg"
+import n8nIcon from "../../public/n8n.svg"
+import viteIcon from "../../public/vite.svg"
 
 const translations = {
   en: {
@@ -39,26 +46,34 @@ const translations = {
     beginner: "Beginner",
     highlyProficient: "Highly proficient",
     continuouslyImproving: "Continuously improving",
-    // Tools descriptions
     vsCodeDesc: "Powerful and extensible code editor",
     gitDesc: "Version control for code management and collaboration",
+    gitlabDesc: "Git platform with CI/CD and project management capabilities",
     postmanDesc: "API testing and development",
     figmaDesc: "UI/UX design and prototyping",
     dockerDesc: "Containerization for deployment and development",
-    // Languages descriptions
+    n8nDesc: "Visual workflow automation platform",
+    viteDesc: "Next-generation frontend build tool",
     javascriptDesc: "Web development language",
     typescriptDesc: "JavaScript superset with static typing",
     phpDesc: "Backend for robust web projects",
     html5Desc: "Structure and content of web pages",
     css3Desc: "Modern styling and formatting",
+    scssDesc: "CSS preprocessor with variables and nesting",
     sqlDesc: "Database management and querying",
     pythonDesc: "Scripting, automation, and general development",
-    // Frameworks descriptions
+    goDesc: "System and backend programming language by Google",
+    nodeDesc: "JavaScript runtime for server-side development",
+    javaDesc: "Object-oriented programming for backend applications",
     reactDesc: "Library for dynamic interfaces",
     laravelDesc: "PHP framework for robust backend applications",
     tailwindDesc: "Utility-first CSS framework for rapid design",
     symfonyDesc: "PHP framework for complex applications",
     bootstrapDesc: "CSS framework for responsive designs",
+    nestjsDesc: "Progressive Node.js framework for scalable backend apps",
+    electronDesc: "Cross-platform desktop application framework",
+    nextDesc: "React-based framework for server-side rendered and static web apps",
+    springBootDesc: "Opinionated framework for building Spring-based microservices",
     frontend: "Frontend",
     backend: "Backend",
     database: "Database",
@@ -66,10 +81,8 @@ const translations = {
     devOps: "DevOps",
     testing: "Testing",
     design: "Design",
-    javaDesc: "Object-oriented programming for backend applications",
-    nextDesc: "React-based framework for server-side rendered and static web apps",
-    springBootDesc: "Opinionated framework for building Spring-based microservices",
-
+    automation: "Automation",
+    desktop: "Desktop",
   },
   fr: {
     skills: "Compétences",
@@ -86,21 +99,32 @@ const translations = {
     continuouslyImproving: "En amélioration continue",
     vsCodeDesc: "Éditeur de code puissant et extensible",
     gitDesc: "Contrôle de version pour la gestion et la collaboration de code",
+    gitlabDesc: "Plateforme Git avec CI/CD et gestion de projet intégrée",
     postmanDesc: "Test et développement d'API",
     figmaDesc: "Conception UI/UX et prototypage",
     dockerDesc: "Conteneurisation pour le déploiement et le développement",
+    n8nDesc: "Plateforme d'automatisation de workflows visuels",
+    viteDesc: "Outil de build frontend nouvelle génération",
     javascriptDesc: "Langage de développement web",
     typescriptDesc: "Surensemble de JavaScript avec typage statique",
     phpDesc: "Backend pour des projets web robustes",
     html5Desc: "Structure et contenu des pages web",
     css3Desc: "Stylisation et formatage modernes",
+    scssDesc: "Préprocesseur CSS avec variables et imbrication",
     sqlDesc: "Gestion et requêtes de bases de données",
     pythonDesc: "Scripting, automatisation et développement général",
+    goDesc: "Langage de programmation système et backend par Google",
+    nodeDesc: "Runtime JavaScript pour le développement côté serveur",
+    javaDesc: "Programmation orientée objet pour les applications backend",
     reactDesc: "Bibliothèque pour interfaces dynamiques",
     laravelDesc: "Framework PHP pour applications backend robustes",
     tailwindDesc: "Framework CSS utilitaire pour conception rapide",
     symfonyDesc: "Framework PHP pour applications complexes",
     bootstrapDesc: "Framework CSS pour designs responsifs",
+    nestjsDesc: "Framework Node.js progressif pour applications backend évolutives",
+    electronDesc: "Framework d'applications desktop cross-platform",
+    nextDesc: "Framework basé sur React pour des applications web SSR et statiques",
+    springBootDesc: "Framework Spring pour créer des microservices",
     frontend: "Frontend",
     backend: "Backend",
     database: "Base de données",
@@ -108,10 +132,8 @@ const translations = {
     devOps: "DevOps",
     testing: "Test",
     design: "Design",
-    javaDesc: "Programmation orientée objet pour les applications backend",
-    nextDesc: "Framework basé sur React pour des applications web SSR et statiques",
-    springBootDesc: "Framework Spring pour créer des microservices",
-
+    automation: "Automation",
+    desktop: "Desktop",
   }
 }
 
@@ -153,7 +175,7 @@ export const Experience = () => {
     {
       title: "VS Code",
       descriptionKey: "vsCodeDesc",
-      icon: reactIcon,
+      icon: undefined,
       progress: 85,
       categoryKey: "development",
     },
@@ -162,6 +184,13 @@ export const Experience = () => {
       descriptionKey: "gitDesc",
       icon: gitIcon,
       progress: 60,
+      categoryKey: "devOps",
+    },
+    {
+      title: "GitLab",
+      descriptionKey: "gitlabDesc",
+      icon: gitlabIcon,
+      progress: 65,
       categoryKey: "devOps",
     },
     {
@@ -176,7 +205,7 @@ export const Experience = () => {
       descriptionKey: "figmaDesc",
       icon: figmaIcon,
       progress: 50,
-      categoryKey: "design"
+      categoryKey: "design",
     },
     {
       title: "Docker",
@@ -184,6 +213,20 @@ export const Experience = () => {
       icon: dockerIcon,
       progress: 50,
       categoryKey: "devOps",
+    },
+    {
+      title: "n8n",
+      descriptionKey: "n8nDesc",
+      icon: n8nIcon,
+      progress: 60,
+      categoryKey: "automation",
+    },
+    {
+      title: "Vite",
+      descriptionKey: "viteDesc",
+      icon: viteIcon,
+      progress: 75,
+      categoryKey: "development",
     },
   ]
 
@@ -221,7 +264,14 @@ export const Experience = () => {
       descriptionKey: "css3Desc",
       icon: cssIcon,
       progress: 90,
-      categoryKey: "frontend"
+      categoryKey: "frontend",
+    },
+    {
+      title: "SCSS",
+      descriptionKey: "scssDesc",
+      icon: scssIcon,
+      progress: 75,
+      categoryKey: "frontend",
     },
     {
       title: "SQL",
@@ -238,18 +288,25 @@ export const Experience = () => {
       categoryKey: "backend",
     },
     {
+      title: "Go",
+      descriptionKey: "goDesc",
+      icon: goIcon,
+      progress: 65,
+      categoryKey: "backend",
+    },
+    {
+      title: "Node.js",
+      descriptionKey: "nodeDesc",
+      icon: nodeIcon,
+      progress: 75,
+      categoryKey: "backend",
+    },
+    {
       title: "Java",
       descriptionKey: "javaDesc",
       icon: javaIcon,
       progress: 80,
       categoryKey: "backend",
-    },
-    {
-      title: "Next.js",
-      descriptionKey: "nextDesc",
-      icon: nextIcon,
-      progress: 80,
-      categoryKey: "frontend",
     },
   ]
 
@@ -262,11 +319,11 @@ export const Experience = () => {
       categoryKey: "frontend",
     },
     {
-      title: "Laravel",
-      descriptionKey: "laravelDesc",
-      icon: laravelIcon,
-      progress: 50,
-      categoryKey: "backend",
+      title: "Next.js",
+      descriptionKey: "nextDesc",
+      icon: nextIcon,
+      progress: 80,
+      categoryKey: "frontend",
     },
     {
       title: "Tailwind CSS",
@@ -276,13 +333,6 @@ export const Experience = () => {
       categoryKey: "frontend",
     },
     {
-      title: "Symfony",
-      descriptionKey: "symfonyDesc",
-      icon: symfonyIcon,
-      progress: 65,
-      categoryKey: "backend",
-    },
-    {
       title: "Bootstrap",
       descriptionKey: "bootstrapDesc",
       icon: bootstrapIcon,
@@ -290,11 +340,39 @@ export const Experience = () => {
       categoryKey: "frontend",
     },
     {
+      title: "NestJS",
+      descriptionKey: "nestjsDesc",
+      icon: nestjsIcon,
+      progress: 65,
+      categoryKey: "backend",
+    },
+    {
+      title: "Laravel",
+      descriptionKey: "laravelDesc",
+      icon: laravelIcon,
+      progress: 50,
+      categoryKey: "backend",
+    },
+    {
+      title: "Symfony",
+      descriptionKey: "symfonyDesc",
+      icon: symfonyIcon,
+      progress: 65,
+      categoryKey: "backend",
+    },
+    {
       title: "Spring Boot",
       descriptionKey: "springBootDesc",
       icon: springbootIcon,
       progress: 50,
       categoryKey: "backend",
+    },
+    {
+      title: "Electron",
+      descriptionKey: "electronDesc",
+      icon: electronIcon,
+      progress: 55,
+      categoryKey: "desktop",
     },
   ]
 
@@ -319,7 +397,7 @@ export const Experience = () => {
                 {item.icon && (
                   <div className="p-2 rounded-xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
                     <img
-                      src={item.icon || "/placeholder.svg"}
+                      src={item.icon}
                       alt={`${item.title} Icon`}
                       width={32}
                       height={32}
@@ -382,7 +460,7 @@ export const Experience = () => {
   }
 
   return (
-    <section id='skills' className="w-full flex justify-center py-16 bg-gradient-to-b from-white to-gray-50  dark:from-black dark:to-gray-900">
+    <section id='skills' className="w-full flex justify-center py-16 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-900">
       <div className="w-[90%] max-w-7xl flex flex-col gap-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <div className="relative">
@@ -413,43 +491,22 @@ export const Experience = () => {
                 value="outils"
                 className="
                   w-1/3 text-sm md:text-base rounded-md transition-colors
-
-                  bg-transparent
-                  text-gray-600
-                  hover:text-gray-900
-
-                  dark:text-gray-300
-                  dark:hover:text-white
-
-                  data-[state=active]:bg-white
-                  data-[state=active]:text-gray-900
-                  data-[state=active]:shadow-sm
-
-                  dark:data-[state=active]:bg-gray-700
-                  dark:data-[state=active]:text-white
+                  bg-transparent text-gray-600 hover:text-gray-900
+                  dark:text-gray-300 dark:hover:text-white
+                  data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm
+                  dark:data-[state=active]:bg-gray-700 dark:data-[state=active]:text-white
                 "
               >
-
                 {t.toolsEnvironments}
               </TabsTrigger>
               <TabsTrigger
                 value="language"
                 className="
                   w-1/3 text-sm md:text-base rounded-md transition-colors
-
-                  bg-transparent
-                  text-gray-600
-                  hover:text-gray-900
-
-                  dark:text-gray-300
-                  dark:hover:text-white
-
-                  data-[state=active]:bg-white
-                  data-[state=active]:text-gray-900
-                  data-[state=active]:shadow-sm
-
-                  dark:data-[state=active]:bg-gray-700
-                  dark:data-[state=active]:text-white
+                  bg-transparent text-gray-600 hover:text-gray-900
+                  dark:text-gray-300 dark:hover:text-white
+                  data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm
+                  dark:data-[state=active]:bg-gray-700 dark:data-[state=active]:text-white
                 "
               >
                 {t.languages}
@@ -458,20 +515,10 @@ export const Experience = () => {
                 value="framework"
                 className="
                   w-1/3 text-sm md:text-base rounded-md transition-colors
-
-                  bg-transparent
-                  text-gray-600
-                  hover:text-gray-900
-
-                  dark:text-gray-300
-                  dark:hover:text-white
-
-                  data-[state=active]:bg-white
-                  data-[state=active]:text-gray-900
-                  data-[state=active]:shadow-sm
-
-                  dark:data-[state=active]:bg-gray-700
-                  dark:data-[state=active]:text-white
+                  bg-transparent text-gray-600 hover:text-gray-900
+                  dark:text-gray-300 dark:hover:text-white
+                  data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm
+                  dark:data-[state=active]:bg-gray-700 dark:data-[state=active]:text-white
                 "
               >
                 {t.frameworksLibraries}

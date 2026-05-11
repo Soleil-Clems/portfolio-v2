@@ -68,8 +68,7 @@ const Contact = () => {
       )
 
       toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        title: t.success,
       })
 
       setFormData({
@@ -81,8 +80,7 @@ const Contact = () => {
       console.error("Error sending message:", error)
       toast({
         variant: "destructive",
-        title: "Message failed to send",
-        description: "Please try again later or contact me directly via email.",
+        title: t.error,
       })
     } finally {
       setIsSubmitting(false)

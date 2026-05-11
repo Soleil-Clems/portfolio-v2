@@ -1,4 +1,3 @@
-"use client"
 
 import { CustomCard } from "@/components/ui/customCard"
 import { projects } from "@/constants/projects"
@@ -8,16 +7,15 @@ import { Button } from "@/components/ui/button"
 import useLanguageStore from "@/store/translation.store"
 
 export const Project = () => {
-  const category: string = "all"
   const [showAll, setShowAll] = useState(false)
   const { lang } = useLanguageStore()
 
-  const filteredProjects =
-    category === "all"
-      ? projects
-      : projects.filter((project) => project.techno.some((tech) => tech.toLowerCase() === category.toLowerCase()))
-
-  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3)
+  const sortedProjects = [...projects].sort((a, b) => {
+    if (a.status === "live" && b.status !== "live") return -1;
+    if (a.status !== "live" && b.status === "live") return 1;
+    return 0;
+  })
+  const displayedProjects = showAll ? sortedProjects : sortedProjects.slice(0, 3)
 
   return (
     <section id="projects" className="w-full flex justify-center py-20 px-4 bg-background bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black">
@@ -43,7 +41,9 @@ export const Project = () => {
                 description={project.description[lang] || project.description.en}
                 imageUrl={project.img}
                 githubUrl={project.github}
+                liveUrl={project.liveUrl}
                 techno={project.techno}
+                status={project.status}
                 skills={project.skills}
               />
             </div>

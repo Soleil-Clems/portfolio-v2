@@ -1,4 +1,3 @@
-"use client"
 
 import { motion } from "framer-motion"
 import useLanguageStore from "@/store/translation.store"
@@ -17,13 +16,15 @@ export const About = () => {
             <motion.div
                 className="w-full max-w-7xl flex flex-col lg:flex-row justify-between items-center px-6 lg:px-8 gap-16"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
             >
                 <motion.div
                     className="w-full lg:w-3/5 flex flex-col gap-10"
                     initial={{ x: -50, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true }}
                     transition={{ delay: 0.2, duration: 0.6 }}
                 >
                     <div className="relative">
@@ -36,19 +37,21 @@ export const About = () => {
                         <motion.h1
                             className="font-bold text-4xl sm:text-5xl lg:text-6xl text-own-dark-deep dark:text-own-purple"
                             initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
                             transition={{ delay: 0.3, duration: 0.5 }}
                         >
                             {lang == "en" ? "About" : "A propos de moi"}
                             <span className="text-own-purple dark:text-white">.</span>
                         </motion.h1>
-                      
+
                     </div>
 
                     <motion.div
                         className="flex flex-col gap-8 text-own-dark"
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
                         transition={{ delay: 0.4, duration: 0.6 }}
                     >
                         <motion.div
@@ -72,7 +75,8 @@ export const About = () => {
                             <motion.p
                                 className="text-base md:text-lg relative pl-4 border-l-2 border-own-purple"
                                 initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
                                 transition={{ delay: 0.5, duration: 0.4 }}
                             >
                                 <HtmlContent content={t.description1} />
@@ -81,7 +85,8 @@ export const About = () => {
                             <motion.p
                                 className="text-base md:text-lg relative pl-4 border-l-2 border-own-purple"
                                 initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
                                 transition={{ delay: 0.6, duration: 0.4 }}
                             >
                                 <HtmlContent content={t.description2} />
@@ -90,7 +95,8 @@ export const About = () => {
                             <motion.p
                                 className="text-base md:text-lg relative pl-4 border-l-2 border-own-purple"
                                 initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
                                 transition={{ delay: 0.7, duration: 0.4 }}
                             >
                                 {t.description3}
@@ -99,7 +105,8 @@ export const About = () => {
 
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                             transition={{ delay: 0.8, duration: 0.4 }}
                         >
                             <a
@@ -131,7 +138,8 @@ export const About = () => {
                 <motion.div
                     className="w-full lg:w-2/5 flex justify-center lg:justify-end"
                     initial={{ x: 50, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                 >
                     <div className="relative">

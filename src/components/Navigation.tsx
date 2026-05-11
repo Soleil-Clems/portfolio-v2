@@ -93,14 +93,14 @@ export default function Navigation() {
                 {t.skills}
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#evaluation"
                 className="text-base text-own-dark dark:text-gray-200 hover:text-own-purple dark:hover:text-own-purple font-medium transition-colors"
               >
                 {t.evaluation}
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="#contact"

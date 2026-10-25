@@ -75,7 +75,7 @@ export const projects: Project[] = [
     {
         "name": "socAdmin",
         "status": "live",
-        "liveUrl": "https://github.com/Soleil-Clems/socadmin",
+        "liveUrl": "https://socadmin.dev/",
         "img": [socadmin1, socadmin2, socadmin3, socadmin4, socadmin5, socadmin6],
         "github": "https://github.com/Soleil-Clems/socadmin",
         "techno": ["Go", "React", "TypeScript", "Docker", "MySQL", "PostgreSQL", "MongoDB"],

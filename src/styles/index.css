@@ -25,6 +25,11 @@ a {
   text-decoration: inherit;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
   display: flex;

@@ -35,7 +35,7 @@ export default function Hero() {
 
 
     return (
-        <section id="home" className="relative flex flex-col md:flex-row lg:flex-row lg:items-center items-start py-20 px-4 lg:px-8 w-full max-w-7xl mx-auto text-own-dark min-h-screen lg:min-h-0 lg:py-32">
+        <section id="home" className="relative overflow-x-clip flex flex-col md:flex-row lg:flex-row lg:items-center items-start py-20 px-4 lg:px-8 w-full max-w-7xl mx-auto text-own-dark min-h-screen lg:min-h-0 lg:py-32">
             <Particles
                 className="absolute inset-0 z-0"
                 quantity={150}
@@ -59,7 +59,7 @@ export default function Hero() {
 
                 <motion.div
                     variants={itemVariants}
-                    className="text-6xl md:text-7xl lg:text-8xl font-bold text-own-dark-deep leading-tight"
+                    className="text-6xl md:text-7xl lg:text-8xl font-bold text-own-dark-deep dark:text-white leading-tight"
                 >
                     <HtmlContent content={t.title} />
                 </motion.div>

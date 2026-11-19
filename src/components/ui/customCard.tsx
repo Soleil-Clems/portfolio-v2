@@ -9,28 +9,30 @@ type ProjectStatus = "live" | "in-progress" | "github";
 const statusConfig: Record<ProjectStatus, { label: { fr: string; en: string }; classes: string; dot?: string }> = {
   live: {
     label: { fr: "Live", en: "Live" },
-    classes: "bg-green-500/15 text-green-600 dark:text-green-400 border border-green-500/30",
+    classes: "bg-white/95 text-green-700 border border-green-500/40 shadow-sm dark:bg-gray-900/90 dark:text-green-400",
     dot: "bg-green-500",
   },
   "in-progress": {
     label: { fr: "En cours", en: "In progress" },
-    classes: "bg-yellow-500/15 text-yellow-600 dark:text-yellow-400 border border-yellow-500/30",
+    classes: "bg-white/95 text-yellow-700 border border-yellow-500/40 shadow-sm dark:bg-gray-900/90 dark:text-yellow-400",
     dot: "bg-yellow-500 animate-pulse",
   },
   github: {
     label: { fr: "GitHub", en: "GitHub" },
-    classes: "bg-gray-500/15 text-gray-600 dark:text-gray-400 border border-gray-500/30",
+    classes: "bg-white/95 text-gray-700 border border-gray-400/40 shadow-sm dark:bg-gray-900/90 dark:text-gray-300",
   },
 };
 
 interface CustomCardProps {
   title: string;
+  tagline?: string;
   description: string;
   imageUrl?: string[];
   githubUrl?: string;
   liveUrl?: string;
   techno: string[];
   status?: ProjectStatus;
+  client?: boolean;
   skills?: {
     fr: string[];
     en: string[];
@@ -106,7 +108,7 @@ const Carousel = ({ images, title, compact = false }: CarouselProps) => {
               <button
                 key={i}
                 onClick={e => { e.stopPropagation(); setCurrent(i); }}
-                className={`rounded-full transition-all duration-200 ${
+                className={`p-0 border-0 rounded-full transition-all duration-200 ${
                   i === current ? "bg-white w-3 h-1.5" : "bg-white/50 w-1.5 h-1.5"
                 }`}
                 aria-label={`Slide ${i + 1}`}
@@ -130,12 +132,14 @@ const ImagePlaceholder = ({ title }: { title: string }) => (
 
 export const CustomCard = ({
   title,
+  tagline,
   description,
   imageUrl,
   githubUrl,
   liveUrl,
   techno,
   status,
+  client,
   skills
 }: CustomCardProps) => {
   const { lang } = useLanguageStore();
@@ -186,9 +190,16 @@ export const CustomCard = ({
           <StatusBadge className="absolute top-2 left-2" />
         </div>
         <div className="p-4">
-          <h3 className="text-lg font-semibold text-own-dark-deep dark:text-white mb-2">
+          {client && (
+            <span className="mb-1 inline-block text-[11px] font-semibold uppercase tracking-wider text-own-purple">
+              {lang === "en" ? "Client project" : "Projet client"}
+            </span>
+          )}
+          <h3 className="text-lg font-semibold text-own-dark-deep dark:text-white">
             {title}
           </h3>
+          {tagline && <p className="mt-1 text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{tagline}</p>}
+          <div className="mb-3" />
           <div className="flex flex-wrap gap-2">
             {techno.map((tech, idx) => (
               <span
@@ -212,7 +223,9 @@ export const CustomCard = ({
               <StatusBadge />
             </div>
             <DialogDescription className="text-sm text-gray-600 dark:text-gray-400">
-              {lang === "en" ? "Project details" : "Détails du projet"}
+              {client
+                ? lang === "en" ? "Client project, in production" : "Projet client, en production"
+                : lang === "en" ? "Project details" : "Détails du projet"}
             </DialogDescription>
           </DialogHeader>
 
@@ -258,6 +271,19 @@ export const CustomCard = ({
           )}
 
           <div className="flex gap-4 flex-wrap">
+            {liveUrl && (
+              <a
+                href={liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-own-purple hover:underline text-sm font-medium"
+              >
+                <ExternalLink className="h-4 w-4" />
+                {liveUrl.includes("chromewebstore")
+                  ? lang === "en" ? "View on the Chrome Web Store" : "Voir sur le Chrome Web Store"
+                  : lang === "en" ? "Open site" : "Ouvrir le site"}
+              </a>
+            )}
             {githubUrl && (
               <a
                 href={githubUrl}
@@ -267,17 +293,6 @@ export const CustomCard = ({
               >
                 <Github className="h-4 w-4" />
                 {lang === "en" ? "View on GitHub" : "Voir sur GitHub"}
-              </a>
-            )}
-            {!githubUrl && liveUrl && (
-              <a
-                href={liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-own-purple hover:underline text-sm font-medium"
-              >
-                <ExternalLink className="h-4 w-4" />
-                {lang === "en" ? "Open site" : "Ouvrir le site"}
               </a>
             )}
           </div>

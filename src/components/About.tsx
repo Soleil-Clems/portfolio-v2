@@ -5,9 +5,17 @@ import { translations } from "@/constants/translations"
 import { HtmlContent } from "@/components/HtmlContent"
 import resume from "@/assets/resume.pdf"
 
+const facts = [
+    { value: { fr: "4", en: "4" }, label: { fr: "projets en production, dont 2 pour des clients", en: "projects in production, 2 of them for clients" } },
+    { value: { fr: "1re place", en: "1st place" }, label: { fr: "hackathon IA 4 Good, Onepoint", en: "IA 4 Good hackathon, Onepoint" } },
+    { value: { fr: "Depuis 2024", en: "Since 2024" }, label: { fr: "développeur fullstack en alternance chez Librasoft", en: "work-study fullstack developer at Librasoft" } },
+    { value: { fr: "2025–2028", en: "2025–2028" }, label: { fr: "Master of Science IA et Big Data, Epitech", en: "MSc in AI and Big Data, Epitech" } },
+]
+
 export const About = () => {
     const { lang } = useLanguageStore()
     const t = translations.about[lang]
+    const l = lang === "en" ? "en" : "fr"
     return (
         <section
             id="about"
@@ -17,14 +25,14 @@ export const About = () => {
                 className="w-full max-w-7xl flex flex-col lg:flex-row justify-between items-center px-6 lg:px-8 gap-16"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "200px" }}
                 transition={{ duration: 0.5 }}
             >
                 <motion.div
                     className="w-full lg:w-3/5 flex flex-col gap-10"
                     initial={{ x: -50, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "200px" }}
                     transition={{ delay: 0.2, duration: 0.6 }}
                 >
                     <div className="relative">
@@ -38,10 +46,10 @@ export const About = () => {
                             className="font-bold text-4xl sm:text-5xl lg:text-6xl text-own-dark-deep dark:text-own-purple"
                             initial={{ y: 20, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "200px" }}
                             transition={{ delay: 0.3, duration: 0.5 }}
                         >
-                            {lang == "en" ? "About" : "A propos de moi"}
+                            {lang == "en" ? "About" : "À propos de moi"}
                             <span className="text-own-purple dark:text-white">.</span>
                         </motion.h1>
 
@@ -51,7 +59,7 @@ export const About = () => {
                         className="flex flex-col gap-8 text-own-dark"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "200px" }}
                         transition={{ delay: 0.4, duration: 0.6 }}
                     >
                         <motion.div
@@ -76,7 +84,7 @@ export const About = () => {
                                 className="text-base md:text-lg relative pl-4 border-l-2 border-own-purple"
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "200px" }}
                                 transition={{ delay: 0.5, duration: 0.4 }}
                             >
                                 <HtmlContent content={t.description1} />
@@ -86,7 +94,7 @@ export const About = () => {
                                 className="text-base md:text-lg relative pl-4 border-l-2 border-own-purple"
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "200px" }}
                                 transition={{ delay: 0.6, duration: 0.4 }}
                             >
                                 <HtmlContent content={t.description2} />
@@ -96,7 +104,7 @@ export const About = () => {
                                 className="text-base md:text-lg relative pl-4 border-l-2 border-own-purple"
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "200px" }}
                                 transition={{ delay: 0.7, duration: 0.4 }}
                             >
                                 {t.description3}
@@ -106,7 +114,7 @@ export const About = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "200px" }}
                             transition={{ delay: 0.8, duration: 0.4 }}
                         >
                             <a
@@ -139,59 +147,18 @@ export const About = () => {
                     className="w-full lg:w-2/5 flex justify-center lg:justify-end"
                     initial={{ x: 50, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "200px" }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                 >
-                    <div className="relative">
-                        <div className="absolute -top-8 -left-8 w-32 h-32 bg-purple-100 dark:bg-purple-900/20 rounded-full blur-xl"></div>
-                        <div className="absolute -bottom-12 -right-12 w-40 h-40 bg-purple-200 dark:bg-purple-800/20 rounded-full blur-xl"></div>
-
-                        <motion.div
-                            className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-xl border-2 border-gray-100/50 dark:border-gray-700/50 hover:border-own-purple/30 dark:hover:border-own-purple/30 relative z-10 transition-all duration-300"
-                            whileHover={{
-                                y: -10,
-                                boxShadow: "0 25px 50px -12px rgba(139, 92, 246, 0.15)",
-                                transition: { type: "spring", stiffness: 300, damping: 10 },
-                            }}
-                            animate={{
-                                y: [0, -10, 0],
-                                transition: {
-                                    y: { repeat: Number.POSITIVE_INFINITY, duration: 4, ease: "easeInOut" },
-                                },
-                            }}
-                        >
-                            <img className="h-full w-full object-contain" src="/Programming-amico.svg" alt="Programming Icon" />
-                        </motion.div>
-
-                        {["React", "Node", "PHP"].map((tech, i) => (
-                            <motion.div
-                                key={tech}
-                                className="absolute hidden lg:flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-lg border-2 border-gray-100/50 dark:border-gray-700/50 hover:border-own-purple/50 dark:hover:border-own-purple/50 px-4 py-2 text-sm font-medium text-own-purple hover:shadow-xl transition-all duration-300 cursor-default"
-                                style={{
-                                    top: `${20 + i * 30}%`,
-                                    right: i % 2 === 0 ? "-10%" : "85%",
-                                }}
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{
-                                    opacity: 1,
-                                    scale: 1,
-                                    y: [0, -8, 0],
-                                    transition: {
-                                        delay: 0.8 + i * 0.2,
-                                        y: {
-                                            repeat: Number.POSITIVE_INFINITY,
-                                            duration: 3 + i,
-                                            ease: "easeInOut",
-                                        },
-                                    },
-                                }}
-                                whileHover={{
-                                    scale: 1.1,
-                                    transition: { type: "spring", stiffness: 400, damping: 10 },
-                                }}
+                    <div className="w-full max-w-md grid grid-cols-2 gap-4">
+                        {facts.map((f) => (
+                            <div
+                                key={f.value.fr}
+                                className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/80 p-5 shadow-sm"
                             >
-                                {tech}
-                            </motion.div>
+                                <p className="text-2xl md:text-3xl font-bold text-own-purple">{f.value[l]}</p>
+                                <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-snug">{f.label[l]}</p>
+                            </div>
                         ))}
                     </div>
                 </motion.div>

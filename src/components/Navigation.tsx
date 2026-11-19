@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { translations } from "@/constants/translations"
 import useLanguageStore from "@/store/translation.store"
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 
 
 export default function Navigation() {
@@ -42,7 +41,7 @@ export default function Navigation() {
       <nav className="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
         <div className="flex items-center">
           <Link to="/" className="text-black dark:text-white text-xl font-bold flex items-baseline">
-            SoleilDEV <span className="text-own-purple text-2xl bold">.</span>
+            Soleil Ouisol<span className="text-own-purple text-2xl bold">.</span>
           </Link>
         </div>
 
@@ -87,6 +86,15 @@ export default function Navigation() {
 
             <li>
               <a
+                href="#parcours"
+                className="text-base text-own-dark dark:text-gray-200 hover:text-own-purple dark:hover:text-own-purple font-medium transition-colors"
+              >
+                {t.parcours}
+              </a>
+            </li>
+
+            <li>
+              <a
                 href="#skills"
                 className="text-base text-own-dark dark:text-gray-200 hover:text-own-purple dark:hover:text-own-purple font-medium transition-colors"
               >
@@ -118,16 +126,20 @@ export default function Navigation() {
           <a
             href="https://www.linkedin.com/in/soleil-ouisol"
             target="_blank"
-            className="flex items-center justify-center w-7 h-7 text-whiterounded-full   transition-colors"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="flex items-center justify-center w-9 h-9 rounded-md text-own-dark dark:text-gray-300 hover:text-own-purple transition-colors"
           >
-            <LinkedInLogoIcon className="text-[#0a66c2]  w-full h-full hover:text-[#0d75dc]" />
+            <Linkedin size={20} />
           </a>
           <a
             href="https://github.com/Soleil-Clems"
             target="_blank"
-            className="flex items-center justify-center w-7 h-7 text-white bg-black  rounded-full hover:bg-gray-800  transition-colors"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="flex items-center justify-center w-9 h-9 rounded-md text-own-dark dark:text-gray-300 hover:text-own-purple transition-colors"
           >
-            <GitHubLogoIcon className="dark:text-white dark:hover:text-gray-200 w-full h-full" />
+            <Github size={20} />
           </a>
           </div>
 
@@ -196,6 +208,16 @@ export default function Navigation() {
                       onClick={handleLinkClick}
                     >
                       {t.projects}
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#parcours"
+                      className="block py-2 text-lg text-own-dark dark:text-white hover:text-own-purple dark:hover:text-own-purple font-medium"
+                      onClick={handleLinkClick}
+                    >
+                      {t.parcours}
                     </a>
                   </li>
 

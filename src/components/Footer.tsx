@@ -9,7 +9,8 @@ const translations = {
         about: "About",
         workTogether: "Interested in working together",
         fullstack: "Fullstack developer",
-        curriculum: "Curriculum",
+        curriculum: "Resume",
+        contact: "Contact",
         copyright: "©2025 Soleil OUISOL"
     },
     fr: {
@@ -19,6 +20,7 @@ const translations = {
         workTogether: "Intéressé par une collaboration",
         fullstack: "Développeur Fullstack",
         curriculum: "CV",
+        contact: "Me contacter",
         copyright: "©2025 Soleil OUISOL"
     }
 };
@@ -32,46 +34,37 @@ export default function Footer() {
 
 
     return (
-        <footer className="flex flex-col w-full p-6 dark:bg-gradient-to-b dark:from-black dark:to-gray-900">
-            <div className="flex w-full justify-around space-x-6">
-                <ul className="flex space-x-8">
-                    <li><a href="#home" className="text-lg text-own-dark hover:text-own-purple font-bold">{t.home}</a></li>
-                    <li><a href="#projects" className="text-lg text-own-dark hover:text-own-purple font-bold">{t.projects}</a></li>
-                    <li><a href="#about" className="text-lg text-own-dark hover:text-own-purple font-bold">{t.about}</a></li>
-                </ul>
-
-                <ul className="flex space-x-8">
-                    <li><a href="https://github.com/Soleil-Clems" target="_blank" className="text-lg text-own-dark hover:text-own-purple font-bold"><Github /></a></li>
-                    <li><a href="https://www.linkedin.com/in/soleil-ouisol" target="_blank" className="text-lg text-own-dark hover:text-own-purple font-bold"><Linkedin /></a></li>
-                </ul>
-            </div>
-
-            <div className="flex flex-col w-full mt-6 space-y-6">
-                <div className="flex w-full justify-around">
-                    <p className="text-center">{t.workTogether}<span className="text-own-purple">?</span></p>
-                    <p className="text-center">{t.fullstack}</p>
-                </div>
-
-                <div className="flex flex-col sm:flex-row justify-around items-center">
-
-                    <div className="space-x-6">
-                        <a
-                            target='_blank'
-                            href={resume} className="px-3 py-1.5  rounded-md bg-own-purple dark:hover:text-black dark:hover:bg-white text-white">
+        <footer className="w-full border-t border-gray-200 dark:border-gray-800 px-6 py-10 dark:bg-gradient-to-b dark:from-black dark:to-gray-900">
+            <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">
+                <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+                    <div className="flex flex-col gap-2">
+                        <span className="text-xl font-bold text-own-dark-deep dark:text-white">Soleil OUISOL<span className="text-own-purple">.</span></span>
+                        <p className="text-gray-600 dark:text-gray-400">{t.fullstack} · {t.workTogether}<span className="text-own-purple">?</span></p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <a target="_blank" rel="noopener noreferrer" href={resume} className="rounded-md bg-own-purple px-4 py-2 text-sm font-medium text-white hover:bg-purple-700">
                             {t.curriculum}
                         </a>
-                        <a
-
-                            href="#projects" className="px-3 py-1.5 rounded-md bg-white dark:bg-own-dark-deep dark:hover:bg-own-dark text-own-dark border border-own-dark hover:bg-black dark:text-white hover:text-white">
-                            {t.projects}
-
+                        <a href="#contact" className="rounded-md border border-gray-300 dark:border-gray-600 px-4 py-2 text-sm font-medium text-own-dark dark:text-white hover:border-own-purple hover:text-own-purple">
+                            {t.contact}
                         </a>
                     </div>
-                    <div className="flex items-center gap-2 sm:flex">
+                </div>
 
-                        <span className='hidden md:flex'>©{copyrightYear} Soleil OUISOL</span> <span className="text-own-purple hidden md:flex"> |
-
-                        </span> <span className="flex gap-2 items-center my-4"><Mail size={20} /> adonai-clems-soleil.ouisol@epitech.eu</span></div>
+                <div className="flex flex-col gap-4 border-t border-gray-200 dark:border-gray-800 pt-6 md:flex-row md:items-center md:justify-between">
+                    <ul className="flex gap-6 text-sm font-medium">
+                        <li><a href="#home" className="text-own-dark dark:text-gray-300 hover:text-own-purple">{t.home}</a></li>
+                        <li><a href="#about" className="text-own-dark dark:text-gray-300 hover:text-own-purple">{t.about}</a></li>
+                        <li><a href="#projects" className="text-own-dark dark:text-gray-300 hover:text-own-purple">{t.projects}</a></li>
+                    </ul>
+                    <div className="flex flex-col gap-3 text-sm text-gray-600 dark:text-gray-400 md:flex-row md:items-center md:gap-6">
+                        <a href="mailto:ouisolclems@gmail.com" className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-own-purple"><Mail size={16} /> ouisolclems@gmail.com</a>
+                        <div className="flex items-center gap-4">
+                            <a href="https://github.com/Soleil-Clems" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-own-purple"><Github size={18} /></a>
+                            <a href="https://www.linkedin.com/in/soleil-ouisol" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-own-purple"><Linkedin size={18} /></a>
+                            <span>©{copyrightYear} Soleil OUISOL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>

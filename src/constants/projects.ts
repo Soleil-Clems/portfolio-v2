@@ -28,6 +28,12 @@ import socadmin5 from "@/assets/socadmin-5.png";
 import socadmin6 from "@/assets/socadmin-6.png";
 import vaultbornGif from "@/assets/VaultBorn.gif";
 import yazoumImg from "@/assets/yazoum.png";
+import impactManager1 from "@/assets/impact-manager-1.jpg";
+import impactManager2 from "@/assets/impact-manager-2.jpg";
+import impactManager3 from "@/assets/impact-manager-3.jpg";
+import impactManager4 from "@/assets/impact-manager-4.jpg";
+import impactManager5 from "@/assets/impact-manager-5.jpg";
+import impactManager6 from "@/assets/impact-manager-6.jpg";
 
 type ProjectStatus = "live" | "in-progress" | "github";
 
@@ -37,6 +43,9 @@ type Project = {
     github?: string;
     liveUrl?: string;
     status?: ProjectStatus;
+    client?: boolean;
+    other?: boolean;
+    tagline?: { en: string; fr: string };
     techno: string[];
     description: { en: string; fr: string };
     skills: { fr: string[]; en: string[] };
@@ -45,12 +54,44 @@ type Project = {
 export const projects: Project[] = [
     // ── Nouveaux projets ──────────────────────────────────────────
     {
-        "name": "Yazoum",
+        "name": "Impact Manager",
+        "tagline": { "fr": "Suivi des membres de l'église ICC Marseille, en production.", "en": "Member follow-up for the ICC Marseille church, in production." },
         "status": "live",
+        "client": true,
+        "img": [impactManager1, impactManager2, impactManager3, impactManager4, impactManager5, impactManager6],
+        "techno": ["Symfony", "Next.js", "React", "TypeScript", "MySQL", "Docker", "GitHub Actions"],
+        "description": {
+            "en": "Member follow-up platform built for ICC Marseille (Impact Centre Chrétien), a church: newcomers and members, impact families and groups, service planning, reports written by advisors, trainings and an audit log. Installable PWA, role-based access and email two-factor authentication. Client project, deployed in production.",
+            "fr": "Plateforme de suivi des membres réalisée pour l'église ICC Marseille (Impact Centre Chrétien) : nouveaux arrivants et membres, familles d'impact et groupes, planning des cultes, rapports des conseillers, formations et journal d'audit. PWA installable, droits par rôle et double authentification par e-mail. Projet client, en production."
+        },
+        "skills": {
+            "fr": [
+                "- API Symfony 7 (PHP 8.4, Doctrine, MySQL) et front Next.js 16 / React 19",
+                "- Droits par rôle appliqués côté API (voters), journal d'audit de chaque action",
+                "- Double authentification par e-mail, appareils de confiance, mots de passe choisis par lien",
+                "- Tableaux avec recherche, filtres et pagination, calendrier du planning",
+                "- PWA installable, pensée pour le mobile",
+                "- Déploiement Docker sécurisé, sauvegardes chiffrées, CI GitHub Actions",
+            ],
+            "en": [
+                "- Symfony 7 API (PHP 8.4, Doctrine, MySQL) and Next.js 16 / React 19 front end",
+                "- Role-based access enforced by the API (voters), audit log of every action",
+                "- Email two-factor authentication, trusted devices, passwords set through one-time links",
+                "- Tables with search, filters and pagination, service planning calendar",
+                "- Installable, mobile-first PWA",
+                "- Hardened Docker deployment, encrypted backups, GitHub Actions CI",
+            ]
+        }
+    },
+    {
+        "name": "Yazoum",
+        "tagline": { "fr": "Accompagner les étudiants internationaux vers leurs études en France.", "en": "Guiding international students towards studying in France." },
+        "status": "live",
+        "client": true,
         "liveUrl": "https://yazoum.vercel.app/",
         "img": [yazoumImg],
         "github": "",
-        "techno": ["Next.js", "TypeScript", "Vercel"],
+        "techno": ["Next.js", "TypeScript", "Vercel", "GitHub Actions"],
         "description": {
             "en": "Professional orientation platform for international students applying to study in France via Campus France. Offers personalized academic guidance, application file preparation, interview coaching, and visa/relocation support.",
             "fr": "Plateforme d'orientation professionnelle pour les étudiants internationaux souhaitant étudier en France via Campus France. Accompagnement personnalisé : choix de formation, constitution du dossier, coaching entretien et conseils visa/installation."
@@ -74,11 +115,12 @@ export const projects: Project[] = [
     },
     {
         "name": "socAdmin",
+        "tagline": { "fr": "MySQL, PostgreSQL et MongoDB dans une seule interface, en web ou en desktop.", "en": "MySQL, PostgreSQL and MongoDB in one interface, on the web or desktop." },
         "status": "live",
         "liveUrl": "https://socadmin.dev/",
         "img": [socadmin1, socadmin2, socadmin3, socadmin4, socadmin5, socadmin6],
         "github": "https://github.com/Soleil-Clems/socadmin",
-        "techno": ["Go", "React", "TypeScript", "Docker", "MySQL", "PostgreSQL", "MongoDB"],
+        "techno": ["Go", "React", "TypeScript", "Docker", "MySQL", "PostgreSQL", "MongoDB", "GitHub Actions"],
         "description": {
             "en": "A modern self-hosted database administration tool supporting MySQL, PostgreSQL, and MongoDB through a unified interface — a contemporary alternative to phpMyAdmin with AES-256 encryption and JWT session management.",
             "fr": "Outil d'administration de bases de données auto-hébergé supportant MySQL, PostgreSQL et MongoDB via une interface unifiée — alternative moderne à phpMyAdmin avec chiffrement AES-256 et sessions JWT."
@@ -106,6 +148,7 @@ export const projects: Project[] = [
     },
     {
         "name": "Lezom",
+        "other": true,
         "status": "github",
         "img": [lezom0, lezom1, lezom2, lezom3, lezom4],
         "github": "https://github.com/Soleil-Clems/lezom-front",
@@ -129,6 +172,7 @@ export const projects: Project[] = [
     },
     {
         "name": "VaultBorn",
+        "tagline": { "fr": "RPG d'action 2D en Java : sept classes, mondes reliés, sauvegarde auto.", "en": "2D action RPG in Java: seven classes, linked worlds, autosave." },
         "status": "github",
         "img": [vaultbornGif],
         "github": "https://github.com/Soleil-Clems/vaultborn",
@@ -158,6 +202,7 @@ export const projects: Project[] = [
     },
     {
         "name": "AlloBoulot",
+        "tagline": { "fr": "Plateforme de recrutement : recherche, candidatures, tableau de bord employeur.", "en": "Recruitment platform: search, applications, employer dashboard." },
         "status": "github",
         "img": [alloBoulot0, alloBoulot1, alloBoulot3, alloBoulot4, alloBoulot5, alloBoulot6],
         "github": "https://github.com/Soleil-Clems/AlloBoulot",
@@ -189,6 +234,7 @@ export const projects: Project[] = [
     },
     {
         "name": "n8n Anti Mail Spam",
+        "other": true,
         "status": "github",
         "img": [n8nImg],
         "github": "https://github.com/Soleil-Clems/n8n_anti_mail_spam",
@@ -214,6 +260,7 @@ export const projects: Project[] = [
     },
     {
         "name": "Marvin CI Forge",
+        "tagline": { "fr": "Jenkins entièrement configuré par le code, prêt à lancer en un conteneur.", "en": "Jenkins fully configured as code, ready to run in one container." },
         "status": "github",
         "img": [marvinCIForge],
         "github": "https://github.com/Soleil-Clems/Marvin_CI_Forge",
@@ -241,11 +288,12 @@ export const projects: Project[] = [
     },
     {
         "name": "GPT History Cleaner",
+        "tagline": { "fr": "Extension Chrome publiée : trier et supprimer ses conversations ChatGPT en masse.", "en": "Published Chrome extension: bulk-delete or archive ChatGPT conversations." },
         "status": "live",
-        "liveUrl": "https://github.com/Soleil-Clems/gpt-history-cleaner",
+        "liveUrl": "https://chromewebstore.google.com/detail/gpt-history-cleaner/glolmnpaakefigbbmokcfjbmnjgacghe",
         "img": [gptDemo],
         "github": "https://github.com/Soleil-Clems/gpt-history-cleaner",
-        "techno": ["Chrome Extension", "React", "TypeScript", "Tailwind CSS", "Vite"],
+        "techno": ["Chrome Extension", "React", "TypeScript", "Tailwind CSS", "Vite", "GitHub Actions"],
         "description": {
             "en": "Chrome extension for bulk deleting or archiving ChatGPT conversations directly from the sidebar. Zero tracking, fully local — built with Manifest V3, React and Tailwind CSS.",
             "fr": "Extension Chrome pour supprimer ou archiver en masse les conversations ChatGPT directement depuis la barre latérale. Zéro tracking, 100% local — construite avec Manifest V3, React et Tailwind CSS."
@@ -272,6 +320,7 @@ export const projects: Project[] = [
     // ── Anciens projets ───────────────────────────────────────────
     {
         "name": "Tweeter Clone",
+        "other": true,
         "status": "github",
         "img": [tweeter],
         "github": "https://github.com/Soleil-Clems/Tweeter_Clone",
@@ -301,6 +350,7 @@ export const projects: Project[] = [
     },
     {
         "name": "Previously On",
+        "other": true,
         "status": "github",
         "img": [previouslyOn],
         "github": "https://github.com/Soleil-Clems/File_Explorer",
@@ -330,6 +380,8 @@ export const projects: Project[] = [
     },
     {
         "name": "Archideco - E-commerce",
+        "client": true,
+        "tagline": { "fr": "Site e-commerce réalisé en équipe pour un franchisé Mobalpa.", "en": "E-commerce site built as a team for a Mobalpa franchisee." },
         "status": "github",
         "img": [archideco],
         "github": "https://github.com/Soleil-Clems/Archideco-Ecommerce",
@@ -383,6 +435,7 @@ export const projects: Project[] = [
     },
     {
         "name": "Dating App",
+        "other": true,
         "status": "github",
         "img": [datingApp],
         "github": "https://github.com/Soleil-Clems/My_meetic",
@@ -412,6 +465,7 @@ export const projects: Project[] = [
     },
     {
         "name": "Go Event",
+        "other": true,
         "status": "github",
         "img": [goEvent],
         "github": "https://github.com/Soleil-Clems/My-event",
@@ -439,6 +493,7 @@ export const projects: Project[] = [
     },
     {
         "name": "Free Ads",
+        "other": true,
         "status": "github",
         "img": [freeAds],
         "github": "https://github.com/Soleil-Clems/Free-Ads",
@@ -464,6 +519,7 @@ export const projects: Project[] = [
     },
     {
         "name": "Game Alter",
+        "other": true,
         "status": "github",
         "img": [gameAlter],
         "github": "https://github.com/Soleil-Clems/Game_Alter",
@@ -487,13 +543,14 @@ export const projects: Project[] = [
     },
     {
         "name": "Hackathon IA 4 Good",
+        "tagline": { "fr": "1re place au hackathon IA 4 Good organisé par Onepoint.", "en": "1st place at the IA 4 Good hackathon run by Onepoint." },
         "status": "github",
         "img": [hackathon],
         "github": "https://github.com/Soleil-Clems/Hackathon-IA-4-Good",
         "techno": ["Python", "IA", "Docker", "Agile", "API Rest"],
         "description": {
-            "en": "AI project developed in a hackathon with real problem-solving objectives. Full agile workflow with Docker deployment.",
-            "fr": "Projet IA réalisé en hackathon avec des objectifs réels de résolution de problèmes. Méthode Agile complète avec déploiement Docker."
+            "en": "AI project built at the Onepoint IA 4 Good hackathon, ranked 1st, with real problem-solving objectives. Full agile workflow with Docker deployment.",
+            "fr": "Projet IA réalisé au hackathon IA 4 Good de Onepoint, classé 1er, avec des objectifs réels de résolution de problèmes. Méthode Agile complète avec déploiement Docker."
         },
         "skills": {
             "fr": [
@@ -521,3 +578,5 @@ export const projects: Project[] = [
         }
     },
 ];
+
+export const featuredOrder = ["Impact Manager", "Yazoum", "socAdmin", "GPT History Cleaner", "Archideco - E-commerce", "Hackathon IA 4 Good", "AlloBoulot", "VaultBorn", "Marvin CI Forge"];

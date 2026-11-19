@@ -4,6 +4,7 @@ export const translations = {
             home: "Home",
             projects: "Projects",
             about: "About",
+            parcours: "Background",
             skills: "Skills",
             evaluation: "Evaluation",
             contact: "Contact",
@@ -12,6 +13,7 @@ export const translations = {
             home: "Accueil",
             projects: "Projets",
             about: "À propos",
+            parcours: "Parcours",
             skills: "Compétences",
             evaluation: "Évaluation",
             contact: "Contact",
@@ -20,21 +22,19 @@ export const translations = {
 
     hero: {
         en: {
-            greeting: "Hello, I'm Soleil 👋🏻",
+            greeting: "Fullstack developer · Marseille",
             title: `<span class="inline-block">Full</span>
                     <span class="inline-block ml-2 text-own-purple">stack</span>
                     <span class="block mt-2">Developer</span>`,
-            description: `I am a <span class="font-medium">fullstack developer</span> currently working in an alternating role at <span class="text-own-purple font-medium">Librasoft</span>.  
-                          I specialize in building <span class="text-own-purple font-medium">robust, scalable, and maintainable applications</span>, transforming complex requirements into practical and efficient digital solutions.`,
+            description: `I'm <span class="font-medium">Soleil</span>. I build complete web applications, <span class="text-own-purple font-medium">from the API to production</span>. Work-study developer at <span class="text-own-purple font-medium">Librasoft</span> since 2024, I also build projects for clients, from the first mockup to production.`,
             curriculum: "Curriculum",
             projects: "Projects",
         },
         fr: {
-            greeting: "Bonjour, je suis Soleil 👋🏻",
+            greeting: "Développeur fullstack · Marseille",
             title: `<span class="inline-block">Dev</span>
                     <span class="inline-block ml-2 text-own-purple">Full Stack</span>`,
-            description: `Je suis un <span class="font-medium">développeur fullstack</span> en alternance chez <span class="text-own-purple font-medium">Librasoft</span>.  
-                          Je conçois des <span class="text-own-purple font-medium">applications robustes, évolutives et maintenables</span>, en transformant des besoins complexes en solutions digitales efficaces et concrètes.`,
+            description: `Je suis <span class="font-medium">Soleil</span>. Je développe des applications web complètes, <span class="text-own-purple font-medium">de l'API à la mise en production</span>. En alternance chez <span class="text-own-purple font-medium">Librasoft</span> depuis 2024, je réalise aussi des projets pour des clients, de la première maquette à la mise en production.`,
             curriculum: "CV",
             projects: "Projets",
         },
@@ -43,16 +43,16 @@ export const translations = {
     about: {
         en: {
             web: "Fullstack Developer",
-            description1: `As a fullstack developer, I have hands-on experience in both frontend and backend development, delivering applications that are performant, maintainable, and user-centered.`,
-            description2: `I am <span class="font-medium">self-taught</span>, <span class="font-medium">adaptable</span> with various technologies, and excel at collaborating in team environments to produce high-quality results.`,
-            description3: `This portfolio highlights my professional projects, personal initiatives, and the continuous growth of my technical expertise in real-world settings.`,
+            description1: `I work across the whole stack: React and Next.js interfaces, APIs in Symfony, Go or NestJS, the database, then Docker, CI and deployment.`,
+            description2: `Trained at the Epitech Web@cadémie, I am now studying for a <span class="font-medium">Master of Science in AI and Big Data</span> at Epitech (2025–2028), in a work-study programme.`,
+            description3: `My latest client project, Impact Manager, handles member follow-up for the ICC Marseille church: role-based access, two-factor authentication, encrypted backups, in production.`,
             resume: "View Full Resume",
         },
         fr: {
             web: "Développeur Fullstack",
-            description1: `En tant que développeur fullstack, j'ai une expérience pratique en développement frontend et backend, en livrant des applications performantes, maintenables et centrées sur l'utilisateur.`,
-            description2: `Je suis <span class="font-medium">autodidacte</span>, <span class="font-medium">polyvalent</span> avec diverses technologies, et je collabore efficacement en équipe pour produire des résultats techniques de haute qualité.`,
-            description3: `Ce portfolio présente mes projets professionnels, mes initiatives personnelles et l'évolution continue de mes compétences techniques dans des contextes concrets.`,
+            description1: `Je travaille sur toute la chaîne : interfaces React et Next.js, API en Symfony, Go ou NestJS, base de données, puis Docker, CI et déploiement.`,
+            description2: `Formé à la Web@cadémie d'Epitech, je prépare un <span class="font-medium">Master of Science en IA et Big Data</span> à Epitech (2025–2028), en alternance.`,
+            description3: `Mon dernier projet client, Impact Manager, sert au suivi des membres de l'église ICC Marseille : droits par rôle, double authentification, sauvegardes chiffrées, en production.`,
             resume: "Voir le CV",
         },
     },
@@ -60,9 +60,9 @@ export const translations = {
     contact: {
         en: {
             title: "Contact Me",
-            description: 'For professional inquiries, collaboration opportunities, or project discussions, feel free to reach out using the form below.',
+            description: 'A work-study position, a freelance project or a question about my work: write to me, I read every message.',
             description1: 'Get in Touch',
-            description2: "Complete the form and I will respond promptly with concrete solutions or guidance.",
+            description2: "Leave your email address and I will get back to you directly.",
             name: 'Name',
             email: 'Email',
             message: 'Message',
@@ -75,9 +75,9 @@ export const translations = {
         },
         fr: {
             title: "Contactez-moi",
-            description: "Pour toute question professionnelle, proposition de collaboration ou discussion de projet, n'hésitez pas à me contacter via le formulaire ci-dessous.",
+            description: "Un poste, une mission freelance ou une question sur un projet : écrivez-moi, je lis chaque message.",
             description1: "Entrer en contact",
-            description2: "Remplissez le formulaire et je vous répondrai rapidement avec des solutions concrètes ou des conseils adaptés.",
+            description2: "Laissez votre adresse e-mail, je vous réponds directement.",
             name: "Nom",
             email: "Email",
             message: "Message",

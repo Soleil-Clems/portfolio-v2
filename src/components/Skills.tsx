@@ -26,11 +26,15 @@ import nestjsIcon from "../../public/nestjs.svg"
 import electronIcon from "../../public/electron.svg"
 import gitlabIcon from "../../public/gitlab.svg"
 import n8nIcon from "../../public/n8n.svg"
-import viteIcon from "../../public/vite.svg"
+import clickupIcon from "../../public/clickup.svg"
+import linuxIcon from "../../public/linux.svg"
+import postgresqlIcon from "../../public/postgresql.svg"
+import mongodbIcon from "../../public/mongodb-light.svg"
+import mongodbDarkIcon from "../../public/mongodb-dark.svg"
 
 import githubIcon from "../../public/github-light.svg"
 
-type Skill = { name: string; icon?: string }
+type Skill = { name: string; icon?: string; iconDark?: string }
 type Group = { title: { fr: string; en: string }; text: { fr: string; en: string }; skills: Skill[] }
 
 const groups: Group[] = [
@@ -67,7 +71,7 @@ const groups: Group[] = [
   {
     title: { fr: "Bases de données", en: "Databases" },
     text: { fr: "Modélisation, migrations et requêtes.", en: "Modelling, migrations and queries." },
-    skills: [{ name: "MySQL", icon: mysqlIcon }, { name: "PostgreSQL" }, { name: "MongoDB" }, { name: "Doctrine" }],
+    skills: [{ name: "MySQL", icon: mysqlIcon }, { name: "PostgreSQL", icon: postgresqlIcon }, { name: "MongoDB", icon: mongodbIcon, iconDark: mongodbDarkIcon }, { name: "Doctrine" }],
   },
   {
     title: { fr: "DevOps et déploiement", en: "DevOps and deployment" },
@@ -77,7 +81,7 @@ const groups: Group[] = [
       { name: "GitHub Actions", icon: githubIcon },
       { name: "GitLab CI", icon: gitlabIcon },
       { name: "Git", icon: gitIcon },
-      { name: "Linux" },
+      { name: "Linux", icon: linuxIcon },
       { name: "Vercel" },
     ],
   },
@@ -85,11 +89,11 @@ const groups: Group[] = [
     title: { fr: "Outils", en: "Tools" },
     text: { fr: "Ce qui sert au quotidien, du test d'API à la maquette.", en: "Everyday tools, from API testing to mockups." },
     skills: [
-      { name: "Vite", icon: viteIcon },
       { name: "Postman", icon: postmanIcon },
       { name: "Figma", icon: figmaIcon },
       { name: "n8n", icon: n8nIcon },
       { name: "Electron", icon: electronIcon },
+      { name: "ClickUp", icon: clickupIcon },
     ],
   },
 ]
@@ -137,7 +141,8 @@ export const Experience = () => {
                     key={s.name}
                     className="inline-flex items-center gap-2 rounded-full border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700/60 px-3 py-1.5 text-sm font-medium text-gray-800 dark:text-gray-100"
                   >
-                    {s.icon && <img src={s.icon} alt="" width={18} height={18} className={`h-[18px] w-[18px] object-contain ${s.icon === githubIcon ? "dark:invert" : ""}`} />}
+                    {s.icon && <img src={s.icon} alt="" width={18} height={18} className={`h-[18px] w-[18px] object-contain ${s.icon === githubIcon ? "dark:invert" : ""} ${s.iconDark ? "dark:hidden" : ""}`} />}
+                    {s.iconDark && <img src={s.iconDark} alt="" width={18} height={18} className="hidden dark:block h-[18px] w-[18px] object-contain" />}
                     {s.name}
                   </li>
                 ))}

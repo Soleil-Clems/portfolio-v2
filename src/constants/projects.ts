@@ -20,12 +20,16 @@ import alloBoulot6 from "@/assets/AlloBoulot-6.png";
 import marvinCIForge from "@/assets/Marvin_CI_Forge.png";
 import n8nImg from "@/assets/n8n.png";
 import gptDemo from "@/assets/gpt-history-cleaner-demo.mp4";
+import gpt1 from "@/assets/gpt-history-cleaner-1.jpg";
+import gpt2 from "@/assets/gpt-history-cleaner-2.jpg";
+import socadminVisuel1 from "@/assets/socadmin-visuel-1.jpg";
+import socadminVisuel2 from "@/assets/socadmin-visuel-2.jpg";
+import socadminVisuel3 from "@/assets/socadmin-visuel-3.jpg";
+import yazoum1 from "@/assets/yazoum-1.jpg";
+import yazoum2 from "@/assets/yazoum-2.jpg";
 import socadmin1 from "@/assets/socadmin-1.png";
-import socadmin2 from "@/assets/socadmin-2.png";
 import socadmin3 from "@/assets/socadmin-3.png";
 import socadmin4 from "@/assets/socadmin-4.png";
-import socadmin5 from "@/assets/socadmin-5.png";
-import socadmin6 from "@/assets/socadmin-6.png";
 import vaultbornGif from "@/assets/VaultBorn.gif";
 import yazoumImg from "@/assets/yazoum.png";
 import impactManager1 from "@/assets/impact-manager-1.jpg";
@@ -124,7 +128,7 @@ export const projects: Project[] = [
         "status": "live",
         "client": true,
         "liveUrl": "https://yazoum.vercel.app/",
-        "img": [yazoumImg],
+        "img": [yazoum1, yazoum2, yazoumImg],
         "github": "",
         "techno": ["Next.js", "TypeScript", "Vercel", "GitHub Actions"],
         "description": {
@@ -153,7 +157,7 @@ export const projects: Project[] = [
         "tagline": { "fr": "MySQL, PostgreSQL et MongoDB dans une seule interface, en web ou en desktop.", "en": "MySQL, PostgreSQL and MongoDB in one interface, on the web or desktop." },
         "status": "live",
         "liveUrl": "https://socadmin.dev/",
-        "img": [socadmin1, socadmin2, socadmin3, socadmin4, socadmin5, socadmin6],
+        "img": [socadminVisuel1, socadminVisuel2, socadminVisuel3, socadmin1, socadmin3, socadmin4],
         "github": "https://github.com/Soleil-Clems/socadmin",
         "techno": ["Go", "React", "TypeScript", "Docker", "MySQL", "PostgreSQL", "MongoDB", "GitHub Actions"],
         "description": {
@@ -326,7 +330,7 @@ export const projects: Project[] = [
         "tagline": { "fr": "Extension Chrome publiée : trier et supprimer ses conversations ChatGPT en masse.", "en": "Published Chrome extension: bulk-delete or archive ChatGPT conversations." },
         "status": "live",
         "liveUrl": "https://chromewebstore.google.com/detail/gpt-history-cleaner/glolmnpaakefigbbmokcfjbmnjgacghe",
-        "img": [gptDemo],
+        "img": [gpt1, gpt2, gptDemo],
         "github": "https://github.com/Soleil-Clems/gpt-history-cleaner",
         "techno": ["Chrome Extension", "React", "TypeScript", "Tailwind CSS", "Vite", "GitHub Actions"],
         "description": {
@@ -614,4 +618,4 @@ export const projects: Project[] = [
     },
 ];
 
-export const featuredOrder = ["Impact Manager", "Dynamia", "Yazoum", "socAdmin", "GPT History Cleaner", "Archideco - E-commerce", "Hackathon IA 4 Good", "AlloBoulot", "VaultBorn", "Marvin CI Forge"];
+export const featuredOrder = ["Impact Manager", "Dynamia", "socAdmin", "Yazoum", "GPT History Cleaner", "Archideco - E-commerce", "Hackathon IA 4 Good", "AlloBoulot", "VaultBorn", "Marvin CI Forge"];

@@ -6,7 +6,7 @@ import { HtmlContent } from "@/components/HtmlContent"
 import resume from "@/assets/resume.pdf"
 
 const facts = [
-    { value: { fr: "4", en: "4" }, label: { fr: "projets en production, dont 2 pour des clients", en: "projects in production, 2 of them for clients" } },
+    { value: { fr: "5", en: "5" }, label: { fr: "projets en production, dont 2 pour des clients", en: "projects in production, 2 of them for clients" } },
     { value: { fr: "1re place", en: "1st place" }, label: { fr: "hackathon IA 4 Good, Onepoint", en: "IA 4 Good hackathon, Onepoint" } },
     { value: { fr: "Depuis 2024", en: "Since 2024" }, label: { fr: "développeur fullstack en alternance chez Librasoft", en: "work-study fullstack developer at Librasoft" } },
     { value: { fr: "2025–2028", en: "2025–2028" }, label: { fr: "Master of Science IA et Big Data, Epitech", en: "MSc in AI and Big Data, Epitech" } },

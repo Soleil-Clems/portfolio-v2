@@ -20,12 +20,16 @@ import alloBoulot6 from "@/assets/AlloBoulot-6.png";
 import marvinCIForge from "@/assets/Marvin_CI_Forge.png";
 import n8nImg from "@/assets/n8n.png";
 import gptDemo from "@/assets/gpt-history-cleaner-demo.mp4";
+import gpt1 from "@/assets/gpt-history-cleaner-1.jpg";
+import gpt2 from "@/assets/gpt-history-cleaner-2.jpg";
+import socadminVisuel1 from "@/assets/socadmin-visuel-1.jpg";
+import socadminVisuel2 from "@/assets/socadmin-visuel-2.jpg";
+import socadminVisuel3 from "@/assets/socadmin-visuel-3.jpg";
+import yazoum1 from "@/assets/yazoum-1.jpg";
+import yazoum2 from "@/assets/yazoum-2.jpg";
 import socadmin1 from "@/assets/socadmin-1.png";
-import socadmin2 from "@/assets/socadmin-2.png";
 import socadmin3 from "@/assets/socadmin-3.png";
 import socadmin4 from "@/assets/socadmin-4.png";
-import socadmin5 from "@/assets/socadmin-5.png";
-import socadmin6 from "@/assets/socadmin-6.png";
 import vaultbornGif from "@/assets/VaultBorn.gif";
 import yazoumImg from "@/assets/yazoum.png";
 import impactManager1 from "@/assets/impact-manager-1.jpg";
@@ -34,6 +38,9 @@ import impactManager3 from "@/assets/impact-manager-3.jpg";
 import impactManager4 from "@/assets/impact-manager-4.jpg";
 import impactManager5 from "@/assets/impact-manager-5.jpg";
 import impactManager6 from "@/assets/impact-manager-6.jpg";
+import dynamia1 from "@/assets/dynamia-1.jpg";
+import dynamia2 from "@/assets/dynamia-2.jpg";
+import dynamia3 from "@/assets/dynamia-3.jpg";
 
 type ProjectStatus = "live" | "in-progress" | "github";
 
@@ -84,12 +91,44 @@ export const projects: Project[] = [
         }
     },
     {
+        "name": "Dynamia",
+        "tagline": { "fr": "Suivi de la nutrition et du poids sur iPhone, disponible sur l'App Store.", "en": "Nutrition and weight tracking on iPhone, available on the App Store." },
+        "status": "live",
+        "liveUrl": "https://dynamia.dev/",
+        "img": [dynamia1, dynamia2, dynamia3],
+        "techno": ["Swift", "SwiftUI", "NestJS", "Next.js", "PostgreSQL", "Docker", "GitHub Actions"],
+        "description": {
+            "en": "iPhone app for tracking nutrition and weight, built for people who train: meals from an offline food database or barcode scanning, active energy read from Apple Health, water, weigh-ins and sleep, daily balance and weight trend. Weekly leagues between players, an admin dashboard (users, retention, crash reports, email campaigns) and a showcase website. Personal project, API and dashboard in production, app available on the App Store.",
+            "fr": "App iPhone de suivi de la nutrition et du poids, pensée pour les sportifs : repas depuis une base d'aliments hors ligne ou par scan de code-barres, énergie active lue dans Apple Santé, eau, pesées et sommeil, bilan du jour et tendance du poids. Ligues hebdomadaires entre joueurs, dashboard d'administration (comptes, rétention, plantages, campagnes e-mail) et site vitrine. Projet personnel, API et dashboard en production, app disponible sur l'App Store."
+        },
+        "skills": {
+            "fr": [
+                "- App iPhone Swift / SwiftUI (SwiftData, Swift Charts, HealthKit, iOS 17+), en français et en anglais",
+                "- API NestJS 11 (TypeScript, Prisma, PostgreSQL 17) et dashboard Next.js 16 / React 19",
+                "- Connexion avec Apple vérifiée côté API, suppression de compte avec révocation de l'accès",
+                "- Ligues hebdomadaires avec montées, descentes et contrôle anti-triche côté serveur",
+                "- Statistiques d'usage anonymes, rapports de plantage MetricKit, courbe de rétention par cohortes",
+                "- Campagnes e-mail Mailjet avec double consentement et désinscription (RGPD)",
+                "- Tests unitaires et d'interface, déploiement Docker derrière Caddy, sauvegardes chiffrées, CI GitHub Actions",
+            ],
+            "en": [
+                "- Swift / SwiftUI iPhone app (SwiftData, Swift Charts, HealthKit, iOS 17+), in French and English",
+                "- NestJS 11 API (TypeScript, Prisma, PostgreSQL 17) and Next.js 16 / React 19 dashboard",
+                "- Sign in with Apple verified by the API, account deletion with access revocation",
+                "- Weekly leagues with promotion, relegation and server-side anti-cheat checks",
+                "- Anonymous usage analytics, MetricKit crash reports, cohort retention curve",
+                "- Mailjet email campaigns with double opt-in and unsubscribe (GDPR)",
+                "- Unit and UI tests, Docker deployment behind Caddy, encrypted backups, GitHub Actions CI",
+            ]
+        }
+    },
+    {
         "name": "Yazoum",
         "tagline": { "fr": "Accompagner les étudiants internationaux vers leurs études en France.", "en": "Guiding international students towards studying in France." },
         "status": "live",
         "client": true,
         "liveUrl": "https://yazoum.vercel.app/",
-        "img": [yazoumImg],
+        "img": [yazoum1, yazoum2, yazoumImg],
         "github": "",
         "techno": ["Next.js", "TypeScript", "Vercel", "GitHub Actions"],
         "description": {
@@ -118,7 +157,7 @@ export const projects: Project[] = [
         "tagline": { "fr": "MySQL, PostgreSQL et MongoDB dans une seule interface, en web ou en desktop.", "en": "MySQL, PostgreSQL and MongoDB in one interface, on the web or desktop." },
         "status": "live",
         "liveUrl": "https://socadmin.dev/",
-        "img": [socadmin1, socadmin2, socadmin3, socadmin4, socadmin5, socadmin6],
+        "img": [socadminVisuel1, socadminVisuel2, socadminVisuel3, socadmin1, socadmin3, socadmin4],
         "github": "https://github.com/Soleil-Clems/socadmin",
         "techno": ["Go", "React", "TypeScript", "Docker", "MySQL", "PostgreSQL", "MongoDB", "GitHub Actions"],
         "description": {
@@ -291,7 +330,7 @@ export const projects: Project[] = [
         "tagline": { "fr": "Extension Chrome publiée : trier et supprimer ses conversations ChatGPT en masse.", "en": "Published Chrome extension: bulk-delete or archive ChatGPT conversations." },
         "status": "live",
         "liveUrl": "https://chromewebstore.google.com/detail/gpt-history-cleaner/glolmnpaakefigbbmokcfjbmnjgacghe",
-        "img": [gptDemo],
+        "img": [gpt1, gpt2, gptDemo],
         "github": "https://github.com/Soleil-Clems/gpt-history-cleaner",
         "techno": ["Chrome Extension", "React", "TypeScript", "Tailwind CSS", "Vite", "GitHub Actions"],
         "description": {
@@ -579,4 +618,4 @@ export const projects: Project[] = [
     },
 ];
 
-export const featuredOrder = ["Impact Manager", "Yazoum", "socAdmin", "GPT History Cleaner", "Archideco - E-commerce", "Hackathon IA 4 Good", "AlloBoulot", "VaultBorn", "Marvin CI Forge"];
+export const featuredOrder = ["Impact Manager", "Dynamia", "socAdmin", "Yazoum", "GPT History Cleaner", "Archideco - E-commerce", "Hackathon IA 4 Good", "AlloBoulot", "VaultBorn", "Marvin CI Forge"];

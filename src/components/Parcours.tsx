@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Briefcase, GraduationCap, Trophy } from "lucide-react"
+import { Briefcase, GraduationCap, Smartphone, Trophy } from "lucide-react"
 import useLanguageStore from "@/store/translation.store"
 
 type Step = {
@@ -29,6 +29,16 @@ const steps: Step[] = [
     text: {
       fr: "Application de suivi des membres de l'église : conception, développement, mise en production et maintenance.",
       en: "Member follow-up application for the church: design, development, deployment and maintenance.",
+    },
+  },
+  {
+    icon: Smartphone,
+    when: { fr: "2026 — en cours", en: "2026 — ongoing" },
+    title: { fr: "Dynamia", en: "Dynamia" },
+    place: "dynamia.dev",
+    text: {
+      fr: "App iPhone de suivi de la nutrition et du poids, avec son API et son dashboard : conception, développement, mise en production et publication sur l'App Store.",
+      en: "iPhone nutrition and weight tracking app, with its API and dashboard: design, development, deployment and App Store release.",
     },
   },
   {

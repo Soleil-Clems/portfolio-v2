@@ -37,8 +37,8 @@ const steps: Step[] = [
     title: { fr: "Dynamia", en: "Dynamia" },
     place: "dynamia.dev",
     text: {
-      fr: "App iPhone de suivi de la nutrition et du poids, avec son API et son dashboard : conception, développement, mise en production et soumission à l'App Store.",
-      en: "iPhone nutrition and weight tracking app, with its API and dashboard: design, development, deployment and App Store submission.",
+      fr: "App iPhone de suivi de la nutrition et du poids, avec son API et son dashboard : conception, développement, mise en production et publication sur l'App Store.",
+      en: "iPhone nutrition and weight tracking app, with its API and dashboard: design, development, deployment and App Store release.",
     },
   },
   {

@@ -92,14 +92,14 @@ export const projects: Project[] = [
     },
     {
         "name": "Dynamia",
-        "tagline": { "fr": "Suivi de la nutrition et du poids sur iPhone, soumis à l'App Store.", "en": "Nutrition and weight tracking on iPhone, submitted to the App Store." },
+        "tagline": { "fr": "Suivi de la nutrition et du poids sur iPhone, disponible sur l'App Store.", "en": "Nutrition and weight tracking on iPhone, available on the App Store." },
         "status": "live",
         "liveUrl": "https://dynamia.dev/",
         "img": [dynamia1, dynamia2, dynamia3],
         "techno": ["Swift", "SwiftUI", "NestJS", "Next.js", "PostgreSQL", "Docker", "GitHub Actions"],
         "description": {
-            "en": "iPhone app for tracking nutrition and weight, built for people who train: meals from an offline food database or barcode scanning, active energy read from Apple Health, water, weigh-ins and sleep, daily balance and weight trend. Weekly leagues between players, an admin dashboard (users, retention, crash reports, email campaigns) and a showcase website. Personal project, API and dashboard in production, app submitted to the App Store.",
-            "fr": "App iPhone de suivi de la nutrition et du poids, pensée pour les sportifs : repas depuis une base d'aliments hors ligne ou par scan de code-barres, énergie active lue dans Apple Santé, eau, pesées et sommeil, bilan du jour et tendance du poids. Ligues hebdomadaires entre joueurs, dashboard d'administration (comptes, rétention, plantages, campagnes e-mail) et site vitrine. Projet personnel, API et dashboard en production, app soumise à l'App Store."
+            "en": "iPhone app for tracking nutrition and weight, built for people who train: meals from an offline food database or barcode scanning, active energy read from Apple Health, water, weigh-ins and sleep, daily balance and weight trend. Weekly leagues between players, an admin dashboard (users, retention, crash reports, email campaigns) and a showcase website. Personal project, API and dashboard in production, app available on the App Store.",
+            "fr": "App iPhone de suivi de la nutrition et du poids, pensée pour les sportifs : repas depuis une base d'aliments hors ligne ou par scan de code-barres, énergie active lue dans Apple Santé, eau, pesées et sommeil, bilan du jour et tendance du poids. Ligues hebdomadaires entre joueurs, dashboard d'administration (comptes, rétention, plantages, campagnes e-mail) et site vitrine. Projet personnel, API et dashboard en production, app disponible sur l'App Store."
         },
         "skills": {
             "fr": [
